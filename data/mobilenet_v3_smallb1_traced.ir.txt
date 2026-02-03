@@ -1,0 +1,818 @@
+graph(%self.1 : __torch__.torchvision.models.mobilenetv3.MobileNetV3,
+      %x.1 : Float(1, 3, 224, 224, strides=[150528, 50176, 224, 1], requires_grad=0, device=cpu)):
+  %classifier : __torch__.torch.nn.modules.container.___torch_mangle_195.Sequential = prim::GetAttr[name="classifier"](%self.1)
+  %avgpool : __torch__.torch.nn.modules.pooling.___torch_mangle_192.AdaptiveAvgPool2d = prim::GetAttr[name="avgpool"](%self.1)
+  %features : __torch__.torch.nn.modules.container.___torch_mangle_191.Sequential = prim::GetAttr[name="features"](%self.1)
+  %11 : int = prim::Constant[value=576](), scope: __module.features/__module.features.10/__module.features.10.block/__module.features.10.block.1/__module.features.10.block.1.0 # /home/gorilla/Documents/Pytorch_static_analyzer/1_ExportingIR/.exportIRvenv/lib/python3.12/site-packages/torch/nn/modules/conv.py:548:0
+  %12 : int = prim::Constant[value=288](), scope: __module.features/__module.features.9/__module.features.9.block/__module.features.9.block.1/__module.features.9.block.1.0 # /home/gorilla/Documents/Pytorch_static_analyzer/1_ExportingIR/.exportIRvenv/lib/python3.12/site-packages/torch/nn/modules/conv.py:548:0
+  %13 : int = prim::Constant[value=144](), scope: __module.features/__module.features.8/__module.features.8.block/__module.features.8.block.1/__module.features.8.block.1.0 # /home/gorilla/Documents/Pytorch_static_analyzer/1_ExportingIR/.exportIRvenv/lib/python3.12/site-packages/torch/nn/modules/conv.py:548:0
+  %14 : int = prim::Constant[value=120](), scope: __module.features/__module.features.7/__module.features.7.block/__module.features.7.block.1/__module.features.7.block.1.0 # /home/gorilla/Documents/Pytorch_static_analyzer/1_ExportingIR/.exportIRvenv/lib/python3.12/site-packages/torch/nn/modules/conv.py:548:0
+  %15 : int = prim::Constant[value=240](), scope: __module.features/__module.features.5/__module.features.5.block/__module.features.5.block.1/__module.features.5.block.1.0 # /home/gorilla/Documents/Pytorch_static_analyzer/1_ExportingIR/.exportIRvenv/lib/python3.12/site-packages/torch/nn/modules/conv.py:548:0
+  %16 : int = prim::Constant[value=96](), scope: __module.features/__module.features.4/__module.features.4.block/__module.features.4.block.1/__module.features.4.block.1.0 # /home/gorilla/Documents/Pytorch_static_analyzer/1_ExportingIR/.exportIRvenv/lib/python3.12/site-packages/torch/nn/modules/conv.py:548:0
+  %17 : int = prim::Constant[value=88](), scope: __module.features/__module.features.3/__module.features.3.block/__module.features.3.block.1/__module.features.3.block.1.0 # /home/gorilla/Documents/Pytorch_static_analyzer/1_ExportingIR/.exportIRvenv/lib/python3.12/site-packages/torch/nn/modules/conv.py:548:0
+  %18 : int = prim::Constant[value=72](), scope: __module.features/__module.features.2/__module.features.2.block/__module.features.2.block.1/__module.features.2.block.1.0 # /home/gorilla/Documents/Pytorch_static_analyzer/1_ExportingIR/.exportIRvenv/lib/python3.12/site-packages/torch/nn/modules/conv.py:548:0
+  %19 : int = prim::Constant[value=16](), scope: __module.features/__module.features.1/__module.features.1.block/__module.features.1.block.0/__module.features.1.block.0.0 # /home/gorilla/Documents/Pytorch_static_analyzer/1_ExportingIR/.exportIRvenv/lib/python3.12/site-packages/torch/nn/modules/conv.py:548:0
+  %20 : bool = prim::Constant[value=1](), scope: __module.features/__module.features.0/__module.features.0.0 # /home/gorilla/Documents/Pytorch_static_analyzer/1_ExportingIR/.exportIRvenv/lib/python3.12/site-packages/torch/nn/modules/conv.py:548:0
+  %21 : int = prim::Constant[value=0](), scope: __module.features/__module.features.0/__module.features.0.0 # /home/gorilla/Documents/Pytorch_static_analyzer/1_ExportingIR/.exportIRvenv/lib/python3.12/site-packages/torch/nn/modules/conv.py:548:0
+  %22 : bool = prim::Constant[value=0](), scope: __module.features/__module.features.0/__module.features.0.0 # /home/gorilla/Documents/Pytorch_static_analyzer/1_ExportingIR/.exportIRvenv/lib/python3.12/site-packages/torch/nn/modules/conv.py:548:0
+  %23 : int = prim::Constant[value=1](), scope: __module.features/__module.features.0/__module.features.0.0 # /home/gorilla/Documents/Pytorch_static_analyzer/1_ExportingIR/.exportIRvenv/lib/python3.12/site-packages/torch/nn/modules/conv.py:548:0
+  %24 : int = prim::Constant[value=2](), scope: __module.features/__module.features.0/__module.features.0.0 # /home/gorilla/Documents/Pytorch_static_analyzer/1_ExportingIR/.exportIRvenv/lib/python3.12/site-packages/torch/nn/modules/conv.py:548:0
+  %25 : NoneType = prim::Constant(), scope: __module.features/__module.features.0/__module.features.0.0
+  %26 : float = prim::Constant[value=0.001](), scope: __module.features/__module.features.0/__module.features.0.1 # /home/gorilla/Documents/Pytorch_static_analyzer/1_ExportingIR/.exportIRvenv/lib/python3.12/site-packages/torch/nn/functional.py:2846:0
+  %27 : float = prim::Constant[value=0.01](), scope: __module.features/__module.features.0/__module.features.0.1 # /home/gorilla/Documents/Pytorch_static_analyzer/1_ExportingIR/.exportIRvenv/lib/python3.12/site-packages/torch/nn/functional.py:2846:0
+  %_12 : __torch__.torchvision.ops.misc.___torch_mangle_190.Conv2dNormActivation = prim::GetAttr[name="12"](%features)
+  %_11 : __torch__.torchvision.models.mobilenetv3.___torch_mangle_186.InvertedResidual = prim::GetAttr[name="11"](%features)
+  %_10 : __torch__.torchvision.models.mobilenetv3.___torch_mangle_167.InvertedResidual = prim::GetAttr[name="10"](%features)
+  %_9 : __torch__.torchvision.models.mobilenetv3.___torch_mangle_148.InvertedResidual = prim::GetAttr[name="9"](%features)
+  %_8 : __torch__.torchvision.models.mobilenetv3.___torch_mangle_129.InvertedResidual = prim::GetAttr[name="8"](%features)
+  %_7 : __torch__.torchvision.models.mobilenetv3.___torch_mangle_110.InvertedResidual = prim::GetAttr[name="7"](%features)
+  %_6 : __torch__.torchvision.models.mobilenetv3.___torch_mangle_91.InvertedResidual = prim::GetAttr[name="6"](%features)
+  %_5 : __torch__.torchvision.models.mobilenetv3.___torch_mangle_72.InvertedResidual = prim::GetAttr[name="5"](%features)
+  %_4 : __torch__.torchvision.models.mobilenetv3.___torch_mangle_53.InvertedResidual = prim::GetAttr[name="4"](%features)
+  %_3.1 : __torch__.torchvision.models.mobilenetv3.___torch_mangle_34.InvertedResidual = prim::GetAttr[name="3"](%features)
+  %_2.13 : __torch__.torchvision.models.mobilenetv3.___torch_mangle_21.InvertedResidual = prim::GetAttr[name="2"](%features)
+  %_1.9 : __torch__.torchvision.models.mobilenetv3.InvertedResidual = prim::GetAttr[name="1"](%features)
+  %_0.3 : __torch__.torchvision.ops.misc.Conv2dNormActivation = prim::GetAttr[name="0"](%features)
+  %_2.1 : __torch__.torch.nn.modules.activation.Hardswish = prim::GetAttr[name="2"](%_0.3)
+  %_1.1 : __torch__.torch.nn.modules.batchnorm.BatchNorm2d = prim::GetAttr[name="1"](%_0.3)
+  %_0.1 : __torch__.torch.nn.modules.conv.Conv2d = prim::GetAttr[name="0"](%_0.3)
+  %weight.173 : Tensor = prim::GetAttr[name="weight"](%_0.1)
+  %45 : int[] = prim::ListConstruct(%24, %24), scope: __module.features/__module.features.0/__module.features.0.0
+  %46 : int[] = prim::ListConstruct(%23, %23), scope: __module.features/__module.features.0/__module.features.0.0
+  %47 : int[] = prim::ListConstruct(%23, %23), scope: __module.features/__module.features.0/__module.features.0.0
+  %48 : int[] = prim::ListConstruct(%21, %21), scope: __module.features/__module.features.0/__module.features.0.0
+  %input.1 : Float(1, 16, 112, 112, strides=[200704, 12544, 112, 1], requires_grad=0, device=cpu) = aten::_convolution(%x.1, %weight.173, %25, %45, %46, %47, %22, %48, %23, %22, %22, %20, %20), scope: __module.features/__module.features.0/__module.features.0.0 # /home/gorilla/Documents/Pytorch_static_analyzer/1_ExportingIR/.exportIRvenv/lib/python3.12/site-packages/torch/nn/modules/conv.py:548:0
+  %running_var.69 : Tensor = prim::GetAttr[name="running_var"](%_1.1)
+  %running_mean.69 : Tensor = prim::GetAttr[name="running_mean"](%_1.1)
+  %bias.105 : Tensor = prim::GetAttr[name="bias"](%_1.1)
+  %weight.175 : Tensor = prim::GetAttr[name="weight"](%_1.1)
+  %input.3 : Float(1, 16, 112, 112, strides=[200704, 12544, 112, 1], requires_grad=0, device=cpu) = aten::batch_norm(%input.1, %weight.175, %bias.105, %running_mean.69, %running_var.69, %22, %27, %26, %20), scope: __module.features/__module.features.0/__module.features.0.1 # /home/gorilla/Documents/Pytorch_static_analyzer/1_ExportingIR/.exportIRvenv/lib/python3.12/site-packages/torch/nn/functional.py:2846:0
+  %input.5 : Float(1, 16, 112, 112, strides=[200704, 12544, 112, 1], requires_grad=0, device=cpu) = aten::hardswish_(%input.3), scope: __module.features/__module.features.0/__module.features.0.2 # /home/gorilla/Documents/Pytorch_static_analyzer/1_ExportingIR/.exportIRvenv/lib/python3.12/site-packages/torch/nn/functional.py:2439:0
+  %block.1 : __torch__.torch.nn.modules.container.Sequential = prim::GetAttr[name="block"](%_1.9)
+  %_2.5 : __torch__.torchvision.ops.misc.___torch_mangle_8.Conv2dNormActivation = prim::GetAttr[name="2"](%block.1)
+  %_1.5 : __torch__.torchvision.ops.misc.SqueezeExcitation = prim::GetAttr[name="1"](%block.1)
+  %_0.7 : __torch__.torchvision.ops.misc.___torch_mangle_2.Conv2dNormActivation = prim::GetAttr[name="0"](%block.1)
+  %_2.3 : __torch__.torch.nn.modules.activation.ReLU = prim::GetAttr[name="2"](%_0.7)
+  %_1.3 : __torch__.torch.nn.modules.batchnorm.___torch_mangle_1.BatchNorm2d = prim::GetAttr[name="1"](%_0.7)
+  %_0.5 : __torch__.torch.nn.modules.conv.___torch_mangle_0.Conv2d = prim::GetAttr[name="0"](%_0.7)
+  %weight.177 : Tensor = prim::GetAttr[name="weight"](%_0.5)
+  %64 : int[] = prim::ListConstruct(%24, %24), scope: __module.features/__module.features.1/__module.features.1.block/__module.features.1.block.0/__module.features.1.block.0.0
+  %65 : int[] = prim::ListConstruct(%23, %23), scope: __module.features/__module.features.1/__module.features.1.block/__module.features.1.block.0/__module.features.1.block.0.0
+  %66 : int[] = prim::ListConstruct(%23, %23), scope: __module.features/__module.features.1/__module.features.1.block/__module.features.1.block.0/__module.features.1.block.0.0
+  %67 : int[] = prim::ListConstruct(%21, %21), scope: __module.features/__module.features.1/__module.features.1.block/__module.features.1.block.0/__module.features.1.block.0.0
+  %input.7 : Float(1, 16, 56, 56, strides=[50176, 3136, 56, 1], requires_grad=0, device=cpu) = aten::_convolution(%input.5, %weight.177, %25, %64, %65, %66, %22, %67, %19, %22, %22, %20, %20), scope: __module.features/__module.features.1/__module.features.1.block/__module.features.1.block.0/__module.features.1.block.0.0 # /home/gorilla/Documents/Pytorch_static_analyzer/1_ExportingIR/.exportIRvenv/lib/python3.12/site-packages/torch/nn/modules/conv.py:548:0
+  %running_var.71 : Tensor = prim::GetAttr[name="running_var"](%_1.3)
+  %running_mean.71 : Tensor = prim::GetAttr[name="running_mean"](%_1.3)
+  %bias.107 : Tensor = prim::GetAttr[name="bias"](%_1.3)
+  %weight.179 : Tensor = prim::GetAttr[name="weight"](%_1.3)
+  %input.9 : Float(1, 16, 56, 56, strides=[50176, 3136, 56, 1], requires_grad=0, device=cpu) = aten::batch_norm(%input.7, %weight.179, %bias.107, %running_mean.71, %running_var.71, %22, %27, %26, %20), scope: __module.features/__module.features.1/__module.features.1.block/__module.features.1.block.0/__module.features.1.block.0.1 # /home/gorilla/Documents/Pytorch_static_analyzer/1_ExportingIR/.exportIRvenv/lib/python3.12/site-packages/torch/nn/functional.py:2846:0
+  %input.11 : Float(1, 16, 56, 56, strides=[50176, 3136, 56, 1], requires_grad=0, device=cpu) = aten::relu_(%input.9), scope: __module.features/__module.features.1/__module.features.1.block/__module.features.1.block.0/__module.features.1.block.0.2 # /home/gorilla/Documents/Pytorch_static_analyzer/1_ExportingIR/.exportIRvenv/lib/python3.12/site-packages/torch/nn/functional.py:1719:0
+  %scale_activation.1 : __torch__.torch.nn.modules.activation.Hardsigmoid = prim::GetAttr[name="scale_activation"](%_1.5)
+  %fc2.1 : __torch__.torch.nn.modules.conv.___torch_mangle_4.Conv2d = prim::GetAttr[name="fc2"](%_1.5)
+  %activation.1 : __torch__.torch.nn.modules.activation.___torch_mangle_5.ReLU = prim::GetAttr[name="activation"](%_1.5)
+  %fc1.1 : __torch__.torch.nn.modules.conv.___torch_mangle_3.Conv2d = prim::GetAttr[name="fc1"](%_1.5)
+  %avgpool.1 : __torch__.torch.nn.modules.pooling.AdaptiveAvgPool2d = prim::GetAttr[name="avgpool"](%_1.5)
+  %80 : int[] = prim::ListConstruct(%23, %23), scope: __module.features/__module.features.1/__module.features.1.block/__module.features.1.block.1/__module.features.1.block.1.avgpool
+  %input.13 : Float(1, 16, 1, 1, strides=[16, 1, 1, 1], requires_grad=0, device=cpu) = aten::adaptive_avg_pool2d(%input.11, %80), scope: __module.features/__module.features.1/__module.features.1.block/__module.features.1.block.1/__module.features.1.block.1.avgpool # /home/gorilla/Documents/Pytorch_static_analyzer/1_ExportingIR/.exportIRvenv/lib/python3.12/site-packages/torch/nn/functional.py:1397:0
+  %bias.109 : Tensor = prim::GetAttr[name="bias"](%fc1.1)
+  %weight.181 : Tensor = prim::GetAttr[name="weight"](%fc1.1)
+  %84 : int[] = prim::ListConstruct(%23, %23), scope: __module.features/__module.features.1/__module.features.1.block/__module.features.1.block.1/__module.features.1.block.1.fc1
+  %85 : int[] = prim::ListConstruct(%21, %21), scope: __module.features/__module.features.1/__module.features.1.block/__module.features.1.block.1/__module.features.1.block.1.fc1
+  %86 : int[] = prim::ListConstruct(%23, %23), scope: __module.features/__module.features.1/__module.features.1.block/__module.features.1.block.1/__module.features.1.block.1.fc1
+  %87 : int[] = prim::ListConstruct(%21, %21), scope: __module.features/__module.features.1/__module.features.1.block/__module.features.1.block.1/__module.features.1.block.1.fc1
+  %input.15 : Float(1, 8, 1, 1, strides=[8, 1, 1, 1], requires_grad=0, device=cpu) = aten::_convolution(%input.13, %weight.181, %bias.109, %84, %85, %86, %22, %87, %23, %22, %22, %20, %20), scope: __module.features/__module.features.1/__module.features.1.block/__module.features.1.block.1/__module.features.1.block.1.fc1 # /home/gorilla/Documents/Pytorch_static_analyzer/1_ExportingIR/.exportIRvenv/lib/python3.12/site-packages/torch/nn/modules/conv.py:548:0
+  %input.17 : Float(1, 8, 1, 1, strides=[8, 1, 1, 1], requires_grad=0, device=cpu) = aten::relu(%input.15), scope: __module.features/__module.features.1/__module.features.1.block/__module.features.1.block.1/__module.features.1.block.1.activation # /home/gorilla/Documents/Pytorch_static_analyzer/1_ExportingIR/.exportIRvenv/lib/python3.12/site-packages/torch/nn/functional.py:1721:0
+  %bias.111 : Tensor = prim::GetAttr[name="bias"](%fc2.1)
+  %weight.183 : Tensor = prim::GetAttr[name="weight"](%fc2.1)
+  %92 : int[] = prim::ListConstruct(%23, %23), scope: __module.features/__module.features.1/__module.features.1.block/__module.features.1.block.1/__module.features.1.block.1.fc2
+  %93 : int[] = prim::ListConstruct(%21, %21), scope: __module.features/__module.features.1/__module.features.1.block/__module.features.1.block.1/__module.features.1.block.1.fc2
+  %94 : int[] = prim::ListConstruct(%23, %23), scope: __module.features/__module.features.1/__module.features.1.block/__module.features.1.block.1/__module.features.1.block.1.fc2
+  %95 : int[] = prim::ListConstruct(%21, %21), scope: __module.features/__module.features.1/__module.features.1.block/__module.features.1.block.1/__module.features.1.block.1.fc2
+  %input.19 : Float(1, 16, 1, 1, strides=[16, 1, 1, 1], requires_grad=0, device=cpu) = aten::_convolution(%input.17, %weight.183, %bias.111, %92, %93, %94, %22, %95, %23, %22, %22, %20, %20), scope: __module.features/__module.features.1/__module.features.1.block/__module.features.1.block.1/__module.features.1.block.1.fc2 # /home/gorilla/Documents/Pytorch_static_analyzer/1_ExportingIR/.exportIRvenv/lib/python3.12/site-packages/torch/nn/modules/conv.py:548:0
+  %scale.1 : Float(1, 16, 1, 1, strides=[16, 1, 1, 1], requires_grad=0, device=cpu) = aten::hardsigmoid(%input.19), scope: __module.features/__module.features.1/__module.features.1.block/__module.features.1.block.1/__module.features.1.block.1.scale_activation # /home/gorilla/Documents/Pytorch_static_analyzer/1_ExportingIR/.exportIRvenv/lib/python3.12/site-packages/torch/nn/functional.py:2323:0
+  %input.21 : Float(1, 16, 56, 56, strides=[50176, 3136, 56, 1], requires_grad=0, device=cpu) = aten::mul(%scale.1, %input.11), scope: __module.features/__module.features.1/__module.features.1.block/__module.features.1.block.1 # /home/gorilla/Documents/Pytorch_static_analyzer/1_ExportingIR/.exportIRvenv/lib/python3.12/site-packages/torchvision/ops/misc.py:261:0
+  %_1.7 : __torch__.torch.nn.modules.batchnorm.___torch_mangle_7.BatchNorm2d = prim::GetAttr[name="1"](%_2.5)
+  %_0.9 : __torch__.torch.nn.modules.conv.___torch_mangle_6.Conv2d = prim::GetAttr[name="0"](%_2.5)
+  %weight.185 : Tensor = prim::GetAttr[name="weight"](%_0.9)
+  %102 : int[] = prim::ListConstruct(%23, %23), scope: __module.features/__module.features.1/__module.features.1.block/__module.features.1.block.2/__module.features.1.block.2.0
+  %103 : int[] = prim::ListConstruct(%21, %21), scope: __module.features/__module.features.1/__module.features.1.block/__module.features.1.block.2/__module.features.1.block.2.0
+  %104 : int[] = prim::ListConstruct(%23, %23), scope: __module.features/__module.features.1/__module.features.1.block/__module.features.1.block.2/__module.features.1.block.2.0
+  %105 : int[] = prim::ListConstruct(%21, %21), scope: __module.features/__module.features.1/__module.features.1.block/__module.features.1.block.2/__module.features.1.block.2.0
+  %input.23 : Float(1, 16, 56, 56, strides=[50176, 3136, 56, 1], requires_grad=0, device=cpu) = aten::_convolution(%input.21, %weight.185, %25, %102, %103, %104, %22, %105, %23, %22, %22, %20, %20), scope: __module.features/__module.features.1/__module.features.1.block/__module.features.1.block.2/__module.features.1.block.2.0 # /home/gorilla/Documents/Pytorch_static_analyzer/1_ExportingIR/.exportIRvenv/lib/python3.12/site-packages/torch/nn/modules/conv.py:548:0
+  %running_var.73 : Tensor = prim::GetAttr[name="running_var"](%_1.7)
+  %running_mean.73 : Tensor = prim::GetAttr[name="running_mean"](%_1.7)
+  %bias.113 : Tensor = prim::GetAttr[name="bias"](%_1.7)
+  %weight.187 : Tensor = prim::GetAttr[name="weight"](%_1.7)
+  %input.25 : Float(1, 16, 56, 56, strides=[50176, 3136, 56, 1], requires_grad=0, device=cpu) = aten::batch_norm(%input.23, %weight.187, %bias.113, %running_mean.73, %running_var.73, %22, %27, %26, %20), scope: __module.features/__module.features.1/__module.features.1.block/__module.features.1.block.2/__module.features.1.block.2.1 # /home/gorilla/Documents/Pytorch_static_analyzer/1_ExportingIR/.exportIRvenv/lib/python3.12/site-packages/torch/nn/functional.py:2846:0
+  %block.3 : __torch__.torch.nn.modules.container.___torch_mangle_20.Sequential = prim::GetAttr[name="block"](%_2.13)
+  %_2.11 : __torch__.torchvision.ops.misc.___torch_mangle_19.Conv2dNormActivation = prim::GetAttr[name="2"](%block.3)
+  %_1.15 : __torch__.torchvision.ops.misc.___torch_mangle_16.Conv2dNormActivation = prim::GetAttr[name="1"](%block.3)
+  %_0.13 : __torch__.torchvision.ops.misc.___torch_mangle_12.Conv2dNormActivation = prim::GetAttr[name="0"](%block.3)
+  %_2.7 : __torch__.torch.nn.modules.activation.___torch_mangle_11.ReLU = prim::GetAttr[name="2"](%_0.13)
+  %_1.11 : __torch__.torch.nn.modules.batchnorm.___torch_mangle_10.BatchNorm2d = prim::GetAttr[name="1"](%_0.13)
+  %_0.11 : __torch__.torch.nn.modules.conv.___torch_mangle_9.Conv2d = prim::GetAttr[name="0"](%_0.13)
+  %weight.189 : Tensor = prim::GetAttr[name="weight"](%_0.11)
+  %120 : int[] = prim::ListConstruct(%23, %23), scope: __module.features/__module.features.2/__module.features.2.block/__module.features.2.block.0/__module.features.2.block.0.0
+  %121 : int[] = prim::ListConstruct(%21, %21), scope: __module.features/__module.features.2/__module.features.2.block/__module.features.2.block.0/__module.features.2.block.0.0
+  %122 : int[] = prim::ListConstruct(%23, %23), scope: __module.features/__module.features.2/__module.features.2.block/__module.features.2.block.0/__module.features.2.block.0.0
+  %123 : int[] = prim::ListConstruct(%21, %21), scope: __module.features/__module.features.2/__module.features.2.block/__module.features.2.block.0/__module.features.2.block.0.0
+  %input.27 : Float(1, 72, 56, 56, strides=[225792, 3136, 56, 1], requires_grad=0, device=cpu) = aten::_convolution(%input.25, %weight.189, %25, %120, %121, %122, %22, %123, %23, %22, %22, %20, %20), scope: __module.features/__module.features.2/__module.features.2.block/__module.features.2.block.0/__module.features.2.block.0.0 # /home/gorilla/Documents/Pytorch_static_analyzer/1_ExportingIR/.exportIRvenv/lib/python3.12/site-packages/torch/nn/modules/conv.py:548:0
+  %running_var.75 : Tensor = prim::GetAttr[name="running_var"](%_1.11)
+  %running_mean.75 : Tensor = prim::GetAttr[name="running_mean"](%_1.11)
+  %bias.115 : Tensor = prim::GetAttr[name="bias"](%_1.11)
+  %weight.191 : Tensor = prim::GetAttr[name="weight"](%_1.11)
+  %input.29 : Float(1, 72, 56, 56, strides=[225792, 3136, 56, 1], requires_grad=0, device=cpu) = aten::batch_norm(%input.27, %weight.191, %bias.115, %running_mean.75, %running_var.75, %22, %27, %26, %20), scope: __module.features/__module.features.2/__module.features.2.block/__module.features.2.block.0/__module.features.2.block.0.1 # /home/gorilla/Documents/Pytorch_static_analyzer/1_ExportingIR/.exportIRvenv/lib/python3.12/site-packages/torch/nn/functional.py:2846:0
+  %input.31 : Float(1, 72, 56, 56, strides=[225792, 3136, 56, 1], requires_grad=0, device=cpu) = aten::relu_(%input.29), scope: __module.features/__module.features.2/__module.features.2.block/__module.features.2.block.0/__module.features.2.block.0.2 # /home/gorilla/Documents/Pytorch_static_analyzer/1_ExportingIR/.exportIRvenv/lib/python3.12/site-packages/torch/nn/functional.py:1719:0
+  %_2.9 : __torch__.torch.nn.modules.activation.___torch_mangle_15.ReLU = prim::GetAttr[name="2"](%_1.15)
+  %_1.13 : __torch__.torch.nn.modules.batchnorm.___torch_mangle_14.BatchNorm2d = prim::GetAttr[name="1"](%_1.15)
+  %_0.15 : __torch__.torch.nn.modules.conv.___torch_mangle_13.Conv2d = prim::GetAttr[name="0"](%_1.15)
+  %weight.193 : Tensor = prim::GetAttr[name="weight"](%_0.15)
+  %135 : int[] = prim::ListConstruct(%24, %24), scope: __module.features/__module.features.2/__module.features.2.block/__module.features.2.block.1/__module.features.2.block.1.0
+  %136 : int[] = prim::ListConstruct(%23, %23), scope: __module.features/__module.features.2/__module.features.2.block/__module.features.2.block.1/__module.features.2.block.1.0
+  %137 : int[] = prim::ListConstruct(%23, %23), scope: __module.features/__module.features.2/__module.features.2.block/__module.features.2.block.1/__module.features.2.block.1.0
+  %138 : int[] = prim::ListConstruct(%21, %21), scope: __module.features/__module.features.2/__module.features.2.block/__module.features.2.block.1/__module.features.2.block.1.0
+  %input.33 : Float(1, 72, 28, 28, strides=[56448, 784, 28, 1], requires_grad=0, device=cpu) = aten::_convolution(%input.31, %weight.193, %25, %135, %136, %137, %22, %138, %18, %22, %22, %20, %20), scope: __module.features/__module.features.2/__module.features.2.block/__module.features.2.block.1/__module.features.2.block.1.0 # /home/gorilla/Documents/Pytorch_static_analyzer/1_ExportingIR/.exportIRvenv/lib/python3.12/site-packages/torch/nn/modules/conv.py:548:0
+  %running_var.77 : Tensor = prim::GetAttr[name="running_var"](%_1.13)
+  %running_mean.77 : Tensor = prim::GetAttr[name="running_mean"](%_1.13)
+  %bias.117 : Tensor = prim::GetAttr[name="bias"](%_1.13)
+  %weight.195 : Tensor = prim::GetAttr[name="weight"](%_1.13)
+  %input.35 : Float(1, 72, 28, 28, strides=[56448, 784, 28, 1], requires_grad=0, device=cpu) = aten::batch_norm(%input.33, %weight.195, %bias.117, %running_mean.77, %running_var.77, %22, %27, %26, %20), scope: __module.features/__module.features.2/__module.features.2.block/__module.features.2.block.1/__module.features.2.block.1.1 # /home/gorilla/Documents/Pytorch_static_analyzer/1_ExportingIR/.exportIRvenv/lib/python3.12/site-packages/torch/nn/functional.py:2846:0
+  %input.37 : Float(1, 72, 28, 28, strides=[56448, 784, 28, 1], requires_grad=0, device=cpu) = aten::relu_(%input.35), scope: __module.features/__module.features.2/__module.features.2.block/__module.features.2.block.1/__module.features.2.block.1.2 # /home/gorilla/Documents/Pytorch_static_analyzer/1_ExportingIR/.exportIRvenv/lib/python3.12/site-packages/torch/nn/functional.py:1719:0
+  %_1.17 : __torch__.torch.nn.modules.batchnorm.___torch_mangle_18.BatchNorm2d = prim::GetAttr[name="1"](%_2.11)
+  %_0.17 : __torch__.torch.nn.modules.conv.___torch_mangle_17.Conv2d = prim::GetAttr[name="0"](%_2.11)
+  %weight.197 : Tensor = prim::GetAttr[name="weight"](%_0.17)
+  %149 : int[] = prim::ListConstruct(%23, %23), scope: __module.features/__module.features.2/__module.features.2.block/__module.features.2.block.2/__module.features.2.block.2.0
+  %150 : int[] = prim::ListConstruct(%21, %21), scope: __module.features/__module.features.2/__module.features.2.block/__module.features.2.block.2/__module.features.2.block.2.0
+  %151 : int[] = prim::ListConstruct(%23, %23), scope: __module.features/__module.features.2/__module.features.2.block/__module.features.2.block.2/__module.features.2.block.2.0
+  %152 : int[] = prim::ListConstruct(%21, %21), scope: __module.features/__module.features.2/__module.features.2.block/__module.features.2.block.2/__module.features.2.block.2.0
+  %input.39 : Float(1, 24, 28, 28, strides=[18816, 784, 28, 1], requires_grad=0, device=cpu) = aten::_convolution(%input.37, %weight.197, %25, %149, %150, %151, %22, %152, %23, %22, %22, %20, %20), scope: __module.features/__module.features.2/__module.features.2.block/__module.features.2.block.2/__module.features.2.block.2.0 # /home/gorilla/Documents/Pytorch_static_analyzer/1_ExportingIR/.exportIRvenv/lib/python3.12/site-packages/torch/nn/modules/conv.py:548:0
+  %running_var.79 : Tensor = prim::GetAttr[name="running_var"](%_1.17)
+  %running_mean.79 : Tensor = prim::GetAttr[name="running_mean"](%_1.17)
+  %bias.119 : Tensor = prim::GetAttr[name="bias"](%_1.17)
+  %weight.199 : Tensor = prim::GetAttr[name="weight"](%_1.17)
+  %input.41 : Float(1, 24, 28, 28, strides=[18816, 784, 28, 1], requires_grad=0, device=cpu) = aten::batch_norm(%input.39, %weight.199, %bias.119, %running_mean.79, %running_var.79, %22, %27, %26, %20), scope: __module.features/__module.features.2/__module.features.2.block/__module.features.2.block.2/__module.features.2.block.2.1 # /home/gorilla/Documents/Pytorch_static_analyzer/1_ExportingIR/.exportIRvenv/lib/python3.12/site-packages/torch/nn/functional.py:2846:0
+  %block.5 : __torch__.torch.nn.modules.container.___torch_mangle_33.Sequential = prim::GetAttr[name="block"](%_3.1)
+  %_2.19 : __torch__.torchvision.ops.misc.___torch_mangle_32.Conv2dNormActivation = prim::GetAttr[name="2"](%block.5)
+  %_1.23 : __torch__.torchvision.ops.misc.___torch_mangle_29.Conv2dNormActivation = prim::GetAttr[name="1"](%block.5)
+  %_0.21 : __torch__.torchvision.ops.misc.___torch_mangle_25.Conv2dNormActivation = prim::GetAttr[name="0"](%block.5)
+  %_2.15 : __torch__.torch.nn.modules.activation.___torch_mangle_24.ReLU = prim::GetAttr[name="2"](%_0.21)
+  %_1.19 : __torch__.torch.nn.modules.batchnorm.___torch_mangle_23.BatchNorm2d = prim::GetAttr[name="1"](%_0.21)
+  %_0.19 : __torch__.torch.nn.modules.conv.___torch_mangle_22.Conv2d = prim::GetAttr[name="0"](%_0.21)
+  %weight.201 : Tensor = prim::GetAttr[name="weight"](%_0.19)
+  %167 : int[] = prim::ListConstruct(%23, %23), scope: __module.features/__module.features.3/__module.features.3.block/__module.features.3.block.0/__module.features.3.block.0.0
+  %168 : int[] = prim::ListConstruct(%21, %21), scope: __module.features/__module.features.3/__module.features.3.block/__module.features.3.block.0/__module.features.3.block.0.0
+  %169 : int[] = prim::ListConstruct(%23, %23), scope: __module.features/__module.features.3/__module.features.3.block/__module.features.3.block.0/__module.features.3.block.0.0
+  %170 : int[] = prim::ListConstruct(%21, %21), scope: __module.features/__module.features.3/__module.features.3.block/__module.features.3.block.0/__module.features.3.block.0.0
+  %input.43 : Float(1, 88, 28, 28, strides=[68992, 784, 28, 1], requires_grad=0, device=cpu) = aten::_convolution(%input.41, %weight.201, %25, %167, %168, %169, %22, %170, %23, %22, %22, %20, %20), scope: __module.features/__module.features.3/__module.features.3.block/__module.features.3.block.0/__module.features.3.block.0.0 # /home/gorilla/Documents/Pytorch_static_analyzer/1_ExportingIR/.exportIRvenv/lib/python3.12/site-packages/torch/nn/modules/conv.py:548:0
+  %running_var.81 : Tensor = prim::GetAttr[name="running_var"](%_1.19)
+  %running_mean.81 : Tensor = prim::GetAttr[name="running_mean"](%_1.19)
+  %bias.121 : Tensor = prim::GetAttr[name="bias"](%_1.19)
+  %weight.203 : Tensor = prim::GetAttr[name="weight"](%_1.19)
+  %input.45 : Float(1, 88, 28, 28, strides=[68992, 784, 28, 1], requires_grad=0, device=cpu) = aten::batch_norm(%input.43, %weight.203, %bias.121, %running_mean.81, %running_var.81, %22, %27, %26, %20), scope: __module.features/__module.features.3/__module.features.3.block/__module.features.3.block.0/__module.features.3.block.0.1 # /home/gorilla/Documents/Pytorch_static_analyzer/1_ExportingIR/.exportIRvenv/lib/python3.12/site-packages/torch/nn/functional.py:2846:0
+  %input.47 : Float(1, 88, 28, 28, strides=[68992, 784, 28, 1], requires_grad=0, device=cpu) = aten::relu_(%input.45), scope: __module.features/__module.features.3/__module.features.3.block/__module.features.3.block.0/__module.features.3.block.0.2 # /home/gorilla/Documents/Pytorch_static_analyzer/1_ExportingIR/.exportIRvenv/lib/python3.12/site-packages/torch/nn/functional.py:1719:0
+  %_2.17 : __torch__.torch.nn.modules.activation.___torch_mangle_28.ReLU = prim::GetAttr[name="2"](%_1.23)
+  %_1.21 : __torch__.torch.nn.modules.batchnorm.___torch_mangle_27.BatchNorm2d = prim::GetAttr[name="1"](%_1.23)
+  %_0.23 : __torch__.torch.nn.modules.conv.___torch_mangle_26.Conv2d = prim::GetAttr[name="0"](%_1.23)
+  %weight.205 : Tensor = prim::GetAttr[name="weight"](%_0.23)
+  %182 : int[] = prim::ListConstruct(%23, %23), scope: __module.features/__module.features.3/__module.features.3.block/__module.features.3.block.1/__module.features.3.block.1.0
+  %183 : int[] = prim::ListConstruct(%23, %23), scope: __module.features/__module.features.3/__module.features.3.block/__module.features.3.block.1/__module.features.3.block.1.0
+  %184 : int[] = prim::ListConstruct(%23, %23), scope: __module.features/__module.features.3/__module.features.3.block/__module.features.3.block.1/__module.features.3.block.1.0
+  %185 : int[] = prim::ListConstruct(%21, %21), scope: __module.features/__module.features.3/__module.features.3.block/__module.features.3.block.1/__module.features.3.block.1.0
+  %input.49 : Float(1, 88, 28, 28, strides=[68992, 784, 28, 1], requires_grad=0, device=cpu) = aten::_convolution(%input.47, %weight.205, %25, %182, %183, %184, %22, %185, %17, %22, %22, %20, %20), scope: __module.features/__module.features.3/__module.features.3.block/__module.features.3.block.1/__module.features.3.block.1.0 # /home/gorilla/Documents/Pytorch_static_analyzer/1_ExportingIR/.exportIRvenv/lib/python3.12/site-packages/torch/nn/modules/conv.py:548:0
+  %running_var.83 : Tensor = prim::GetAttr[name="running_var"](%_1.21)
+  %running_mean.83 : Tensor = prim::GetAttr[name="running_mean"](%_1.21)
+  %bias.123 : Tensor = prim::GetAttr[name="bias"](%_1.21)
+  %weight.207 : Tensor = prim::GetAttr[name="weight"](%_1.21)
+  %input.51 : Float(1, 88, 28, 28, strides=[68992, 784, 28, 1], requires_grad=0, device=cpu) = aten::batch_norm(%input.49, %weight.207, %bias.123, %running_mean.83, %running_var.83, %22, %27, %26, %20), scope: __module.features/__module.features.3/__module.features.3.block/__module.features.3.block.1/__module.features.3.block.1.1 # /home/gorilla/Documents/Pytorch_static_analyzer/1_ExportingIR/.exportIRvenv/lib/python3.12/site-packages/torch/nn/functional.py:2846:0
+  %input.53 : Float(1, 88, 28, 28, strides=[68992, 784, 28, 1], requires_grad=0, device=cpu) = aten::relu_(%input.51), scope: __module.features/__module.features.3/__module.features.3.block/__module.features.3.block.1/__module.features.3.block.1.2 # /home/gorilla/Documents/Pytorch_static_analyzer/1_ExportingIR/.exportIRvenv/lib/python3.12/site-packages/torch/nn/functional.py:1719:0
+  %_1.25 : __torch__.torch.nn.modules.batchnorm.___torch_mangle_31.BatchNorm2d = prim::GetAttr[name="1"](%_2.19)
+  %_0.25 : __torch__.torch.nn.modules.conv.___torch_mangle_30.Conv2d = prim::GetAttr[name="0"](%_2.19)
+  %weight.209 : Tensor = prim::GetAttr[name="weight"](%_0.25)
+  %196 : int[] = prim::ListConstruct(%23, %23), scope: __module.features/__module.features.3/__module.features.3.block/__module.features.3.block.2/__module.features.3.block.2.0
+  %197 : int[] = prim::ListConstruct(%21, %21), scope: __module.features/__module.features.3/__module.features.3.block/__module.features.3.block.2/__module.features.3.block.2.0
+  %198 : int[] = prim::ListConstruct(%23, %23), scope: __module.features/__module.features.3/__module.features.3.block/__module.features.3.block.2/__module.features.3.block.2.0
+  %199 : int[] = prim::ListConstruct(%21, %21), scope: __module.features/__module.features.3/__module.features.3.block/__module.features.3.block.2/__module.features.3.block.2.0
+  %input.55 : Float(1, 24, 28, 28, strides=[18816, 784, 28, 1], requires_grad=0, device=cpu) = aten::_convolution(%input.53, %weight.209, %25, %196, %197, %198, %22, %199, %23, %22, %22, %20, %20), scope: __module.features/__module.features.3/__module.features.3.block/__module.features.3.block.2/__module.features.3.block.2.0 # /home/gorilla/Documents/Pytorch_static_analyzer/1_ExportingIR/.exportIRvenv/lib/python3.12/site-packages/torch/nn/modules/conv.py:548:0
+  %running_var.85 : Tensor = prim::GetAttr[name="running_var"](%_1.25)
+  %running_mean.85 : Tensor = prim::GetAttr[name="running_mean"](%_1.25)
+  %bias.125 : Tensor = prim::GetAttr[name="bias"](%_1.25)
+  %weight.211 : Tensor = prim::GetAttr[name="weight"](%_1.25)
+  %result.1 : Float(1, 24, 28, 28, strides=[18816, 784, 28, 1], requires_grad=0, device=cpu) = aten::batch_norm(%input.55, %weight.211, %bias.125, %running_mean.85, %running_var.85, %22, %27, %26, %20), scope: __module.features/__module.features.3/__module.features.3.block/__module.features.3.block.2/__module.features.3.block.2.1 # /home/gorilla/Documents/Pytorch_static_analyzer/1_ExportingIR/.exportIRvenv/lib/python3.12/site-packages/torch/nn/functional.py:2846:0
+  %input.57 : Float(1, 24, 28, 28, strides=[18816, 784, 28, 1], requires_grad=0, device=cpu) = aten::add_(%result.1, %input.41, %23), scope: __module.features/__module.features.3 # /home/gorilla/Documents/Pytorch_static_analyzer/1_ExportingIR/.exportIRvenv/lib/python3.12/site-packages/torchvision/models/mobilenetv3.py:114:0
+  %block.7 : __torch__.torch.nn.modules.container.___torch_mangle_52.Sequential = prim::GetAttr[name="block"](%_4)
+  %_3.3 : __torch__.torchvision.ops.misc.___torch_mangle_51.Conv2dNormActivation = prim::GetAttr[name="3"](%block.7)
+  %_2.25 : __torch__.torchvision.ops.misc.___torch_mangle_48.SqueezeExcitation = prim::GetAttr[name="2"](%block.7)
+  %_1.31 : __torch__.torchvision.ops.misc.___torch_mangle_42.Conv2dNormActivation = prim::GetAttr[name="1"](%block.7)
+  %_0.29 : __torch__.torchvision.ops.misc.___torch_mangle_38.Conv2dNormActivation = prim::GetAttr[name="0"](%block.7)
+  %_2.21 : __torch__.torch.nn.modules.activation.___torch_mangle_37.Hardswish = prim::GetAttr[name="2"](%_0.29)
+  %_1.27 : __torch__.torch.nn.modules.batchnorm.___torch_mangle_36.BatchNorm2d = prim::GetAttr[name="1"](%_0.29)
+  %_0.27 : __torch__.torch.nn.modules.conv.___torch_mangle_35.Conv2d = prim::GetAttr[name="0"](%_0.29)
+  %weight.213 : Tensor = prim::GetAttr[name="weight"](%_0.27)
+  %216 : int[] = prim::ListConstruct(%23, %23), scope: __module.features/__module.features.4/__module.features.4.block/__module.features.4.block.0/__module.features.4.block.0.0
+  %217 : int[] = prim::ListConstruct(%21, %21), scope: __module.features/__module.features.4/__module.features.4.block/__module.features.4.block.0/__module.features.4.block.0.0
+  %218 : int[] = prim::ListConstruct(%23, %23), scope: __module.features/__module.features.4/__module.features.4.block/__module.features.4.block.0/__module.features.4.block.0.0
+  %219 : int[] = prim::ListConstruct(%21, %21), scope: __module.features/__module.features.4/__module.features.4.block/__module.features.4.block.0/__module.features.4.block.0.0
+  %input.59 : Float(1, 96, 28, 28, strides=[75264, 784, 28, 1], requires_grad=0, device=cpu) = aten::_convolution(%input.57, %weight.213, %25, %216, %217, %218, %22, %219, %23, %22, %22, %20, %20), scope: __module.features/__module.features.4/__module.features.4.block/__module.features.4.block.0/__module.features.4.block.0.0 # /home/gorilla/Documents/Pytorch_static_analyzer/1_ExportingIR/.exportIRvenv/lib/python3.12/site-packages/torch/nn/modules/conv.py:548:0
+  %running_var.87 : Tensor = prim::GetAttr[name="running_var"](%_1.27)
+  %running_mean.87 : Tensor = prim::GetAttr[name="running_mean"](%_1.27)
+  %bias.127 : Tensor = prim::GetAttr[name="bias"](%_1.27)
+  %weight.215 : Tensor = prim::GetAttr[name="weight"](%_1.27)
+  %input.61 : Float(1, 96, 28, 28, strides=[75264, 784, 28, 1], requires_grad=0, device=cpu) = aten::batch_norm(%input.59, %weight.215, %bias.127, %running_mean.87, %running_var.87, %22, %27, %26, %20), scope: __module.features/__module.features.4/__module.features.4.block/__module.features.4.block.0/__module.features.4.block.0.1 # /home/gorilla/Documents/Pytorch_static_analyzer/1_ExportingIR/.exportIRvenv/lib/python3.12/site-packages/torch/nn/functional.py:2846:0
+  %input.63 : Float(1, 96, 28, 28, strides=[75264, 784, 28, 1], requires_grad=0, device=cpu) = aten::hardswish_(%input.61), scope: __module.features/__module.features.4/__module.features.4.block/__module.features.4.block.0/__module.features.4.block.0.2 # /home/gorilla/Documents/Pytorch_static_analyzer/1_ExportingIR/.exportIRvenv/lib/python3.12/site-packages/torch/nn/functional.py:2439:0
+  %_2.23 : __torch__.torch.nn.modules.activation.___torch_mangle_41.Hardswish = prim::GetAttr[name="2"](%_1.31)
+  %_1.29 : __torch__.torch.nn.modules.batchnorm.___torch_mangle_40.BatchNorm2d = prim::GetAttr[name="1"](%_1.31)
+  %_0.31 : __torch__.torch.nn.modules.conv.___torch_mangle_39.Conv2d = prim::GetAttr[name="0"](%_1.31)
+  %weight.217 : Tensor = prim::GetAttr[name="weight"](%_0.31)
+  %231 : int[] = prim::ListConstruct(%24, %24), scope: __module.features/__module.features.4/__module.features.4.block/__module.features.4.block.1/__module.features.4.block.1.0
+  %232 : int[] = prim::ListConstruct(%24, %24), scope: __module.features/__module.features.4/__module.features.4.block/__module.features.4.block.1/__module.features.4.block.1.0
+  %233 : int[] = prim::ListConstruct(%23, %23), scope: __module.features/__module.features.4/__module.features.4.block/__module.features.4.block.1/__module.features.4.block.1.0
+  %234 : int[] = prim::ListConstruct(%21, %21), scope: __module.features/__module.features.4/__module.features.4.block/__module.features.4.block.1/__module.features.4.block.1.0
+  %input.65 : Float(1, 96, 14, 14, strides=[18816, 196, 14, 1], requires_grad=0, device=cpu) = aten::_convolution(%input.63, %weight.217, %25, %231, %232, %233, %22, %234, %16, %22, %22, %20, %20), scope: __module.features/__module.features.4/__module.features.4.block/__module.features.4.block.1/__module.features.4.block.1.0 # /home/gorilla/Documents/Pytorch_static_analyzer/1_ExportingIR/.exportIRvenv/lib/python3.12/site-packages/torch/nn/modules/conv.py:548:0
+  %running_var.89 : Tensor = prim::GetAttr[name="running_var"](%_1.29)
+  %running_mean.89 : Tensor = prim::GetAttr[name="running_mean"](%_1.29)
+  %bias.129 : Tensor = prim::GetAttr[name="bias"](%_1.29)
+  %weight.219 : Tensor = prim::GetAttr[name="weight"](%_1.29)
+  %input.67 : Float(1, 96, 14, 14, strides=[18816, 196, 14, 1], requires_grad=0, device=cpu) = aten::batch_norm(%input.65, %weight.219, %bias.129, %running_mean.89, %running_var.89, %22, %27, %26, %20), scope: __module.features/__module.features.4/__module.features.4.block/__module.features.4.block.1/__module.features.4.block.1.1 # /home/gorilla/Documents/Pytorch_static_analyzer/1_ExportingIR/.exportIRvenv/lib/python3.12/site-packages/torch/nn/functional.py:2846:0
+  %input.69 : Float(1, 96, 14, 14, strides=[18816, 196, 14, 1], requires_grad=0, device=cpu) = aten::hardswish_(%input.67), scope: __module.features/__module.features.4/__module.features.4.block/__module.features.4.block.1/__module.features.4.block.1.2 # /home/gorilla/Documents/Pytorch_static_analyzer/1_ExportingIR/.exportIRvenv/lib/python3.12/site-packages/torch/nn/functional.py:2439:0
+  %scale_activation.3 : __torch__.torch.nn.modules.activation.___torch_mangle_47.Hardsigmoid = prim::GetAttr[name="scale_activation"](%_2.25)
+  %fc2.3 : __torch__.torch.nn.modules.conv.___torch_mangle_45.Conv2d = prim::GetAttr[name="fc2"](%_2.25)
+  %activation.3 : __torch__.torch.nn.modules.activation.___torch_mangle_46.ReLU = prim::GetAttr[name="activation"](%_2.25)
+  %fc1.3 : __torch__.torch.nn.modules.conv.___torch_mangle_44.Conv2d = prim::GetAttr[name="fc1"](%_2.25)
+  %avgpool.3 : __torch__.torch.nn.modules.pooling.___torch_mangle_43.AdaptiveAvgPool2d = prim::GetAttr[name="avgpool"](%_2.25)
+  %247 : int[] = prim::ListConstruct(%23, %23), scope: __module.features/__module.features.4/__module.features.4.block/__module.features.4.block.2/__module.features.4.block.2.avgpool
+  %input.71 : Float(1, 96, 1, 1, strides=[96, 1, 1, 1], requires_grad=0, device=cpu) = aten::adaptive_avg_pool2d(%input.69, %247), scope: __module.features/__module.features.4/__module.features.4.block/__module.features.4.block.2/__module.features.4.block.2.avgpool # /home/gorilla/Documents/Pytorch_static_analyzer/1_ExportingIR/.exportIRvenv/lib/python3.12/site-packages/torch/nn/functional.py:1397:0
+  %bias.131 : Tensor = prim::GetAttr[name="bias"](%fc1.3)
+  %weight.221 : Tensor = prim::GetAttr[name="weight"](%fc1.3)
+  %251 : int[] = prim::ListConstruct(%23, %23), scope: __module.features/__module.features.4/__module.features.4.block/__module.features.4.block.2/__module.features.4.block.2.fc1
+  %252 : int[] = prim::ListConstruct(%21, %21), scope: __module.features/__module.features.4/__module.features.4.block/__module.features.4.block.2/__module.features.4.block.2.fc1
+  %253 : int[] = prim::ListConstruct(%23, %23), scope: __module.features/__module.features.4/__module.features.4.block/__module.features.4.block.2/__module.features.4.block.2.fc1
+  %254 : int[] = prim::ListConstruct(%21, %21), scope: __module.features/__module.features.4/__module.features.4.block/__module.features.4.block.2/__module.features.4.block.2.fc1
+  %input.73 : Float(1, 24, 1, 1, strides=[24, 1, 1, 1], requires_grad=0, device=cpu) = aten::_convolution(%input.71, %weight.221, %bias.131, %251, %252, %253, %22, %254, %23, %22, %22, %20, %20), scope: __module.features/__module.features.4/__module.features.4.block/__module.features.4.block.2/__module.features.4.block.2.fc1 # /home/gorilla/Documents/Pytorch_static_analyzer/1_ExportingIR/.exportIRvenv/lib/python3.12/site-packages/torch/nn/modules/conv.py:548:0
+  %input.75 : Float(1, 24, 1, 1, strides=[24, 1, 1, 1], requires_grad=0, device=cpu) = aten::relu(%input.73), scope: __module.features/__module.features.4/__module.features.4.block/__module.features.4.block.2/__module.features.4.block.2.activation # /home/gorilla/Documents/Pytorch_static_analyzer/1_ExportingIR/.exportIRvenv/lib/python3.12/site-packages/torch/nn/functional.py:1721:0
+  %bias.133 : Tensor = prim::GetAttr[name="bias"](%fc2.3)
+  %weight.223 : Tensor = prim::GetAttr[name="weight"](%fc2.3)
+  %259 : int[] = prim::ListConstruct(%23, %23), scope: __module.features/__module.features.4/__module.features.4.block/__module.features.4.block.2/__module.features.4.block.2.fc2
+  %260 : int[] = prim::ListConstruct(%21, %21), scope: __module.features/__module.features.4/__module.features.4.block/__module.features.4.block.2/__module.features.4.block.2.fc2
+  %261 : int[] = prim::ListConstruct(%23, %23), scope: __module.features/__module.features.4/__module.features.4.block/__module.features.4.block.2/__module.features.4.block.2.fc2
+  %262 : int[] = prim::ListConstruct(%21, %21), scope: __module.features/__module.features.4/__module.features.4.block/__module.features.4.block.2/__module.features.4.block.2.fc2
+  %input.77 : Float(1, 96, 1, 1, strides=[96, 1, 1, 1], requires_grad=0, device=cpu) = aten::_convolution(%input.75, %weight.223, %bias.133, %259, %260, %261, %22, %262, %23, %22, %22, %20, %20), scope: __module.features/__module.features.4/__module.features.4.block/__module.features.4.block.2/__module.features.4.block.2.fc2 # /home/gorilla/Documents/Pytorch_static_analyzer/1_ExportingIR/.exportIRvenv/lib/python3.12/site-packages/torch/nn/modules/conv.py:548:0
+  %scale.3 : Float(1, 96, 1, 1, strides=[96, 1, 1, 1], requires_grad=0, device=cpu) = aten::hardsigmoid(%input.77), scope: __module.features/__module.features.4/__module.features.4.block/__module.features.4.block.2/__module.features.4.block.2.scale_activation # /home/gorilla/Documents/Pytorch_static_analyzer/1_ExportingIR/.exportIRvenv/lib/python3.12/site-packages/torch/nn/functional.py:2323:0
+  %input.79 : Float(1, 96, 14, 14, strides=[18816, 196, 14, 1], requires_grad=0, device=cpu) = aten::mul(%scale.3, %input.69), scope: __module.features/__module.features.4/__module.features.4.block/__module.features.4.block.2 # /home/gorilla/Documents/Pytorch_static_analyzer/1_ExportingIR/.exportIRvenv/lib/python3.12/site-packages/torchvision/ops/misc.py:261:0
+  %_1.33 : __torch__.torch.nn.modules.batchnorm.___torch_mangle_50.BatchNorm2d = prim::GetAttr[name="1"](%_3.3)
+  %_0.33 : __torch__.torch.nn.modules.conv.___torch_mangle_49.Conv2d = prim::GetAttr[name="0"](%_3.3)
+  %weight.225 : Tensor = prim::GetAttr[name="weight"](%_0.33)
+  %269 : int[] = prim::ListConstruct(%23, %23), scope: __module.features/__module.features.4/__module.features.4.block/__module.features.4.block.3/__module.features.4.block.3.0
+  %270 : int[] = prim::ListConstruct(%21, %21), scope: __module.features/__module.features.4/__module.features.4.block/__module.features.4.block.3/__module.features.4.block.3.0
+  %271 : int[] = prim::ListConstruct(%23, %23), scope: __module.features/__module.features.4/__module.features.4.block/__module.features.4.block.3/__module.features.4.block.3.0
+  %272 : int[] = prim::ListConstruct(%21, %21), scope: __module.features/__module.features.4/__module.features.4.block/__module.features.4.block.3/__module.features.4.block.3.0
+  %input.81 : Float(1, 40, 14, 14, strides=[7840, 196, 14, 1], requires_grad=0, device=cpu) = aten::_convolution(%input.79, %weight.225, %25, %269, %270, %271, %22, %272, %23, %22, %22, %20, %20), scope: __module.features/__module.features.4/__module.features.4.block/__module.features.4.block.3/__module.features.4.block.3.0 # /home/gorilla/Documents/Pytorch_static_analyzer/1_ExportingIR/.exportIRvenv/lib/python3.12/site-packages/torch/nn/modules/conv.py:548:0
+  %running_var.91 : Tensor = prim::GetAttr[name="running_var"](%_1.33)
+  %running_mean.91 : Tensor = prim::GetAttr[name="running_mean"](%_1.33)
+  %bias.135 : Tensor = prim::GetAttr[name="bias"](%_1.33)
+  %weight.227 : Tensor = prim::GetAttr[name="weight"](%_1.33)
+  %input.83 : Float(1, 40, 14, 14, strides=[7840, 196, 14, 1], requires_grad=0, device=cpu) = aten::batch_norm(%input.81, %weight.227, %bias.135, %running_mean.91, %running_var.91, %22, %27, %26, %20), scope: __module.features/__module.features.4/__module.features.4.block/__module.features.4.block.3/__module.features.4.block.3.1 # /home/gorilla/Documents/Pytorch_static_analyzer/1_ExportingIR/.exportIRvenv/lib/python3.12/site-packages/torch/nn/functional.py:2846:0
+  %block.9 : __torch__.torch.nn.modules.container.___torch_mangle_71.Sequential = prim::GetAttr[name="block"](%_5)
+  %_3.5 : __torch__.torchvision.ops.misc.___torch_mangle_70.Conv2dNormActivation = prim::GetAttr[name="3"](%block.9)
+  %_2.31 : __torch__.torchvision.ops.misc.___torch_mangle_67.SqueezeExcitation = prim::GetAttr[name="2"](%block.9)
+  %_1.39 : __torch__.torchvision.ops.misc.___torch_mangle_61.Conv2dNormActivation = prim::GetAttr[name="1"](%block.9)
+  %_0.37 : __torch__.torchvision.ops.misc.___torch_mangle_57.Conv2dNormActivation = prim::GetAttr[name="0"](%block.9)
+  %_2.27 : __torch__.torch.nn.modules.activation.___torch_mangle_56.Hardswish = prim::GetAttr[name="2"](%_0.37)
+  %_1.35 : __torch__.torch.nn.modules.batchnorm.___torch_mangle_55.BatchNorm2d = prim::GetAttr[name="1"](%_0.37)
+  %_0.35 : __torch__.torch.nn.modules.conv.___torch_mangle_54.Conv2d = prim::GetAttr[name="0"](%_0.37)
+  %weight.229 : Tensor = prim::GetAttr[name="weight"](%_0.35)
+  %288 : int[] = prim::ListConstruct(%23, %23), scope: __module.features/__module.features.5/__module.features.5.block/__module.features.5.block.0/__module.features.5.block.0.0
+  %289 : int[] = prim::ListConstruct(%21, %21), scope: __module.features/__module.features.5/__module.features.5.block/__module.features.5.block.0/__module.features.5.block.0.0
+  %290 : int[] = prim::ListConstruct(%23, %23), scope: __module.features/__module.features.5/__module.features.5.block/__module.features.5.block.0/__module.features.5.block.0.0
+  %291 : int[] = prim::ListConstruct(%21, %21), scope: __module.features/__module.features.5/__module.features.5.block/__module.features.5.block.0/__module.features.5.block.0.0
+  %input.85 : Float(1, 240, 14, 14, strides=[47040, 196, 14, 1], requires_grad=0, device=cpu) = aten::_convolution(%input.83, %weight.229, %25, %288, %289, %290, %22, %291, %23, %22, %22, %20, %20), scope: __module.features/__module.features.5/__module.features.5.block/__module.features.5.block.0/__module.features.5.block.0.0 # /home/gorilla/Documents/Pytorch_static_analyzer/1_ExportingIR/.exportIRvenv/lib/python3.12/site-packages/torch/nn/modules/conv.py:548:0
+  %running_var.93 : Tensor = prim::GetAttr[name="running_var"](%_1.35)
+  %running_mean.93 : Tensor = prim::GetAttr[name="running_mean"](%_1.35)
+  %bias.137 : Tensor = prim::GetAttr[name="bias"](%_1.35)
+  %weight.231 : Tensor = prim::GetAttr[name="weight"](%_1.35)
+  %input.87 : Float(1, 240, 14, 14, strides=[47040, 196, 14, 1], requires_grad=0, device=cpu) = aten::batch_norm(%input.85, %weight.231, %bias.137, %running_mean.93, %running_var.93, %22, %27, %26, %20), scope: __module.features/__module.features.5/__module.features.5.block/__module.features.5.block.0/__module.features.5.block.0.1 # /home/gorilla/Documents/Pytorch_static_analyzer/1_ExportingIR/.exportIRvenv/lib/python3.12/site-packages/torch/nn/functional.py:2846:0
+  %input.89 : Float(1, 240, 14, 14, strides=[47040, 196, 14, 1], requires_grad=0, device=cpu) = aten::hardswish_(%input.87), scope: __module.features/__module.features.5/__module.features.5.block/__module.features.5.block.0/__module.features.5.block.0.2 # /home/gorilla/Documents/Pytorch_static_analyzer/1_ExportingIR/.exportIRvenv/lib/python3.12/site-packages/torch/nn/functional.py:2439:0
+  %_2.29 : __torch__.torch.nn.modules.activation.___torch_mangle_60.Hardswish = prim::GetAttr[name="2"](%_1.39)
+  %_1.37 : __torch__.torch.nn.modules.batchnorm.___torch_mangle_59.BatchNorm2d = prim::GetAttr[name="1"](%_1.39)
+  %_0.39 : __torch__.torch.nn.modules.conv.___torch_mangle_58.Conv2d = prim::GetAttr[name="0"](%_1.39)
+  %weight.233 : Tensor = prim::GetAttr[name="weight"](%_0.39)
+  %303 : int[] = prim::ListConstruct(%23, %23), scope: __module.features/__module.features.5/__module.features.5.block/__module.features.5.block.1/__module.features.5.block.1.0
+  %304 : int[] = prim::ListConstruct(%24, %24), scope: __module.features/__module.features.5/__module.features.5.block/__module.features.5.block.1/__module.features.5.block.1.0
+  %305 : int[] = prim::ListConstruct(%23, %23), scope: __module.features/__module.features.5/__module.features.5.block/__module.features.5.block.1/__module.features.5.block.1.0
+  %306 : int[] = prim::ListConstruct(%21, %21), scope: __module.features/__module.features.5/__module.features.5.block/__module.features.5.block.1/__module.features.5.block.1.0
+  %input.91 : Float(1, 240, 14, 14, strides=[47040, 196, 14, 1], requires_grad=0, device=cpu) = aten::_convolution(%input.89, %weight.233, %25, %303, %304, %305, %22, %306, %15, %22, %22, %20, %20), scope: __module.features/__module.features.5/__module.features.5.block/__module.features.5.block.1/__module.features.5.block.1.0 # /home/gorilla/Documents/Pytorch_static_analyzer/1_ExportingIR/.exportIRvenv/lib/python3.12/site-packages/torch/nn/modules/conv.py:548:0
+  %running_var.95 : Tensor = prim::GetAttr[name="running_var"](%_1.37)
+  %running_mean.95 : Tensor = prim::GetAttr[name="running_mean"](%_1.37)
+  %bias.139 : Tensor = prim::GetAttr[name="bias"](%_1.37)
+  %weight.235 : Tensor = prim::GetAttr[name="weight"](%_1.37)
+  %input.93 : Float(1, 240, 14, 14, strides=[47040, 196, 14, 1], requires_grad=0, device=cpu) = aten::batch_norm(%input.91, %weight.235, %bias.139, %running_mean.95, %running_var.95, %22, %27, %26, %20), scope: __module.features/__module.features.5/__module.features.5.block/__module.features.5.block.1/__module.features.5.block.1.1 # /home/gorilla/Documents/Pytorch_static_analyzer/1_ExportingIR/.exportIRvenv/lib/python3.12/site-packages/torch/nn/functional.py:2846:0
+  %input.95 : Float(1, 240, 14, 14, strides=[47040, 196, 14, 1], requires_grad=0, device=cpu) = aten::hardswish_(%input.93), scope: __module.features/__module.features.5/__module.features.5.block/__module.features.5.block.1/__module.features.5.block.1.2 # /home/gorilla/Documents/Pytorch_static_analyzer/1_ExportingIR/.exportIRvenv/lib/python3.12/site-packages/torch/nn/functional.py:2439:0
+  %scale_activation.5 : __torch__.torch.nn.modules.activation.___torch_mangle_66.Hardsigmoid = prim::GetAttr[name="scale_activation"](%_2.31)
+  %fc2.5 : __torch__.torch.nn.modules.conv.___torch_mangle_64.Conv2d = prim::GetAttr[name="fc2"](%_2.31)
+  %activation.5 : __torch__.torch.nn.modules.activation.___torch_mangle_65.ReLU = prim::GetAttr[name="activation"](%_2.31)
+  %fc1.5 : __torch__.torch.nn.modules.conv.___torch_mangle_63.Conv2d = prim::GetAttr[name="fc1"](%_2.31)
+  %avgpool.5 : __torch__.torch.nn.modules.pooling.___torch_mangle_62.AdaptiveAvgPool2d = prim::GetAttr[name="avgpool"](%_2.31)
+  %319 : int[] = prim::ListConstruct(%23, %23), scope: __module.features/__module.features.5/__module.features.5.block/__module.features.5.block.2/__module.features.5.block.2.avgpool
+  %input.97 : Float(1, 240, 1, 1, strides=[240, 1, 1, 1], requires_grad=0, device=cpu) = aten::adaptive_avg_pool2d(%input.95, %319), scope: __module.features/__module.features.5/__module.features.5.block/__module.features.5.block.2/__module.features.5.block.2.avgpool # /home/gorilla/Documents/Pytorch_static_analyzer/1_ExportingIR/.exportIRvenv/lib/python3.12/site-packages/torch/nn/functional.py:1397:0
+  %bias.141 : Tensor = prim::GetAttr[name="bias"](%fc1.5)
+  %weight.237 : Tensor = prim::GetAttr[name="weight"](%fc1.5)
+  %323 : int[] = prim::ListConstruct(%23, %23), scope: __module.features/__module.features.5/__module.features.5.block/__module.features.5.block.2/__module.features.5.block.2.fc1
+  %324 : int[] = prim::ListConstruct(%21, %21), scope: __module.features/__module.features.5/__module.features.5.block/__module.features.5.block.2/__module.features.5.block.2.fc1
+  %325 : int[] = prim::ListConstruct(%23, %23), scope: __module.features/__module.features.5/__module.features.5.block/__module.features.5.block.2/__module.features.5.block.2.fc1
+  %326 : int[] = prim::ListConstruct(%21, %21), scope: __module.features/__module.features.5/__module.features.5.block/__module.features.5.block.2/__module.features.5.block.2.fc1
+  %input.99 : Float(1, 64, 1, 1, strides=[64, 1, 1, 1], requires_grad=0, device=cpu) = aten::_convolution(%input.97, %weight.237, %bias.141, %323, %324, %325, %22, %326, %23, %22, %22, %20, %20), scope: __module.features/__module.features.5/__module.features.5.block/__module.features.5.block.2/__module.features.5.block.2.fc1 # /home/gorilla/Documents/Pytorch_static_analyzer/1_ExportingIR/.exportIRvenv/lib/python3.12/site-packages/torch/nn/modules/conv.py:548:0
+  %input.101 : Float(1, 64, 1, 1, strides=[64, 1, 1, 1], requires_grad=0, device=cpu) = aten::relu(%input.99), scope: __module.features/__module.features.5/__module.features.5.block/__module.features.5.block.2/__module.features.5.block.2.activation # /home/gorilla/Documents/Pytorch_static_analyzer/1_ExportingIR/.exportIRvenv/lib/python3.12/site-packages/torch/nn/functional.py:1721:0
+  %bias.143 : Tensor = prim::GetAttr[name="bias"](%fc2.5)
+  %weight.239 : Tensor = prim::GetAttr[name="weight"](%fc2.5)
+  %331 : int[] = prim::ListConstruct(%23, %23), scope: __module.features/__module.features.5/__module.features.5.block/__module.features.5.block.2/__module.features.5.block.2.fc2
+  %332 : int[] = prim::ListConstruct(%21, %21), scope: __module.features/__module.features.5/__module.features.5.block/__module.features.5.block.2/__module.features.5.block.2.fc2
+  %333 : int[] = prim::ListConstruct(%23, %23), scope: __module.features/__module.features.5/__module.features.5.block/__module.features.5.block.2/__module.features.5.block.2.fc2
+  %334 : int[] = prim::ListConstruct(%21, %21), scope: __module.features/__module.features.5/__module.features.5.block/__module.features.5.block.2/__module.features.5.block.2.fc2
+  %input.103 : Float(1, 240, 1, 1, strides=[240, 1, 1, 1], requires_grad=0, device=cpu) = aten::_convolution(%input.101, %weight.239, %bias.143, %331, %332, %333, %22, %334, %23, %22, %22, %20, %20), scope: __module.features/__module.features.5/__module.features.5.block/__module.features.5.block.2/__module.features.5.block.2.fc2 # /home/gorilla/Documents/Pytorch_static_analyzer/1_ExportingIR/.exportIRvenv/lib/python3.12/site-packages/torch/nn/modules/conv.py:548:0
+  %scale.5 : Float(1, 240, 1, 1, strides=[240, 1, 1, 1], requires_grad=0, device=cpu) = aten::hardsigmoid(%input.103), scope: __module.features/__module.features.5/__module.features.5.block/__module.features.5.block.2/__module.features.5.block.2.scale_activation # /home/gorilla/Documents/Pytorch_static_analyzer/1_ExportingIR/.exportIRvenv/lib/python3.12/site-packages/torch/nn/functional.py:2323:0
+  %input.105 : Float(1, 240, 14, 14, strides=[47040, 196, 14, 1], requires_grad=0, device=cpu) = aten::mul(%scale.5, %input.95), scope: __module.features/__module.features.5/__module.features.5.block/__module.features.5.block.2 # /home/gorilla/Documents/Pytorch_static_analyzer/1_ExportingIR/.exportIRvenv/lib/python3.12/site-packages/torchvision/ops/misc.py:261:0
+  %_1.41 : __torch__.torch.nn.modules.batchnorm.___torch_mangle_69.BatchNorm2d = prim::GetAttr[name="1"](%_3.5)
+  %_0.41 : __torch__.torch.nn.modules.conv.___torch_mangle_68.Conv2d = prim::GetAttr[name="0"](%_3.5)
+  %weight.241 : Tensor = prim::GetAttr[name="weight"](%_0.41)
+  %341 : int[] = prim::ListConstruct(%23, %23), scope: __module.features/__module.features.5/__module.features.5.block/__module.features.5.block.3/__module.features.5.block.3.0
+  %342 : int[] = prim::ListConstruct(%21, %21), scope: __module.features/__module.features.5/__module.features.5.block/__module.features.5.block.3/__module.features.5.block.3.0
+  %343 : int[] = prim::ListConstruct(%23, %23), scope: __module.features/__module.features.5/__module.features.5.block/__module.features.5.block.3/__module.features.5.block.3.0
+  %344 : int[] = prim::ListConstruct(%21, %21), scope: __module.features/__module.features.5/__module.features.5.block/__module.features.5.block.3/__module.features.5.block.3.0
+  %input.107 : Float(1, 40, 14, 14, strides=[7840, 196, 14, 1], requires_grad=0, device=cpu) = aten::_convolution(%input.105, %weight.241, %25, %341, %342, %343, %22, %344, %23, %22, %22, %20, %20), scope: __module.features/__module.features.5/__module.features.5.block/__module.features.5.block.3/__module.features.5.block.3.0 # /home/gorilla/Documents/Pytorch_static_analyzer/1_ExportingIR/.exportIRvenv/lib/python3.12/site-packages/torch/nn/modules/conv.py:548:0
+  %running_var.97 : Tensor = prim::GetAttr[name="running_var"](%_1.41)
+  %running_mean.97 : Tensor = prim::GetAttr[name="running_mean"](%_1.41)
+  %bias.145 : Tensor = prim::GetAttr[name="bias"](%_1.41)
+  %weight.243 : Tensor = prim::GetAttr[name="weight"](%_1.41)
+  %result.3 : Float(1, 40, 14, 14, strides=[7840, 196, 14, 1], requires_grad=0, device=cpu) = aten::batch_norm(%input.107, %weight.243, %bias.145, %running_mean.97, %running_var.97, %22, %27, %26, %20), scope: __module.features/__module.features.5/__module.features.5.block/__module.features.5.block.3/__module.features.5.block.3.1 # /home/gorilla/Documents/Pytorch_static_analyzer/1_ExportingIR/.exportIRvenv/lib/python3.12/site-packages/torch/nn/functional.py:2846:0
+  %input.109 : Float(1, 40, 14, 14, strides=[7840, 196, 14, 1], requires_grad=0, device=cpu) = aten::add_(%result.3, %input.83, %23), scope: __module.features/__module.features.5 # /home/gorilla/Documents/Pytorch_static_analyzer/1_ExportingIR/.exportIRvenv/lib/python3.12/site-packages/torchvision/models/mobilenetv3.py:114:0
+  %block.11 : __torch__.torch.nn.modules.container.___torch_mangle_90.Sequential = prim::GetAttr[name="block"](%_6)
+  %_3.7 : __torch__.torchvision.ops.misc.___torch_mangle_89.Conv2dNormActivation = prim::GetAttr[name="3"](%block.11)
+  %_2.37 : __torch__.torchvision.ops.misc.___torch_mangle_86.SqueezeExcitation = prim::GetAttr[name="2"](%block.11)
+  %_1.47 : __torch__.torchvision.ops.misc.___torch_mangle_80.Conv2dNormActivation = prim::GetAttr[name="1"](%block.11)
+  %_0.45 : __torch__.torchvision.ops.misc.___torch_mangle_76.Conv2dNormActivation = prim::GetAttr[name="0"](%block.11)
+  %_2.33 : __torch__.torch.nn.modules.activation.___torch_mangle_75.Hardswish = prim::GetAttr[name="2"](%_0.45)
+  %_1.43 : __torch__.torch.nn.modules.batchnorm.___torch_mangle_74.BatchNorm2d = prim::GetAttr[name="1"](%_0.45)
+  %_0.43 : __torch__.torch.nn.modules.conv.___torch_mangle_73.Conv2d = prim::GetAttr[name="0"](%_0.45)
+  %weight.245 : Tensor = prim::GetAttr[name="weight"](%_0.43)
+  %361 : int[] = prim::ListConstruct(%23, %23), scope: __module.features/__module.features.6/__module.features.6.block/__module.features.6.block.0/__module.features.6.block.0.0
+  %362 : int[] = prim::ListConstruct(%21, %21), scope: __module.features/__module.features.6/__module.features.6.block/__module.features.6.block.0/__module.features.6.block.0.0
+  %363 : int[] = prim::ListConstruct(%23, %23), scope: __module.features/__module.features.6/__module.features.6.block/__module.features.6.block.0/__module.features.6.block.0.0
+  %364 : int[] = prim::ListConstruct(%21, %21), scope: __module.features/__module.features.6/__module.features.6.block/__module.features.6.block.0/__module.features.6.block.0.0
+  %input.111 : Float(1, 240, 14, 14, strides=[47040, 196, 14, 1], requires_grad=0, device=cpu) = aten::_convolution(%input.109, %weight.245, %25, %361, %362, %363, %22, %364, %23, %22, %22, %20, %20), scope: __module.features/__module.features.6/__module.features.6.block/__module.features.6.block.0/__module.features.6.block.0.0 # /home/gorilla/Documents/Pytorch_static_analyzer/1_ExportingIR/.exportIRvenv/lib/python3.12/site-packages/torch/nn/modules/conv.py:548:0
+  %running_var.99 : Tensor = prim::GetAttr[name="running_var"](%_1.43)
+  %running_mean.99 : Tensor = prim::GetAttr[name="running_mean"](%_1.43)
+  %bias.147 : Tensor = prim::GetAttr[name="bias"](%_1.43)
+  %weight.247 : Tensor = prim::GetAttr[name="weight"](%_1.43)
+  %input.113 : Float(1, 240, 14, 14, strides=[47040, 196, 14, 1], requires_grad=0, device=cpu) = aten::batch_norm(%input.111, %weight.247, %bias.147, %running_mean.99, %running_var.99, %22, %27, %26, %20), scope: __module.features/__module.features.6/__module.features.6.block/__module.features.6.block.0/__module.features.6.block.0.1 # /home/gorilla/Documents/Pytorch_static_analyzer/1_ExportingIR/.exportIRvenv/lib/python3.12/site-packages/torch/nn/functional.py:2846:0
+  %input.115 : Float(1, 240, 14, 14, strides=[47040, 196, 14, 1], requires_grad=0, device=cpu) = aten::hardswish_(%input.113), scope: __module.features/__module.features.6/__module.features.6.block/__module.features.6.block.0/__module.features.6.block.0.2 # /home/gorilla/Documents/Pytorch_static_analyzer/1_ExportingIR/.exportIRvenv/lib/python3.12/site-packages/torch/nn/functional.py:2439:0
+  %_2.35 : __torch__.torch.nn.modules.activation.___torch_mangle_79.Hardswish = prim::GetAttr[name="2"](%_1.47)
+  %_1.45 : __torch__.torch.nn.modules.batchnorm.___torch_mangle_78.BatchNorm2d = prim::GetAttr[name="1"](%_1.47)
+  %_0.47 : __torch__.torch.nn.modules.conv.___torch_mangle_77.Conv2d = prim::GetAttr[name="0"](%_1.47)
+  %weight.249 : Tensor = prim::GetAttr[name="weight"](%_0.47)
+  %376 : int[] = prim::ListConstruct(%23, %23), scope: __module.features/__module.features.6/__module.features.6.block/__module.features.6.block.1/__module.features.6.block.1.0
+  %377 : int[] = prim::ListConstruct(%24, %24), scope: __module.features/__module.features.6/__module.features.6.block/__module.features.6.block.1/__module.features.6.block.1.0
+  %378 : int[] = prim::ListConstruct(%23, %23), scope: __module.features/__module.features.6/__module.features.6.block/__module.features.6.block.1/__module.features.6.block.1.0
+  %379 : int[] = prim::ListConstruct(%21, %21), scope: __module.features/__module.features.6/__module.features.6.block/__module.features.6.block.1/__module.features.6.block.1.0
+  %input.117 : Float(1, 240, 14, 14, strides=[47040, 196, 14, 1], requires_grad=0, device=cpu) = aten::_convolution(%input.115, %weight.249, %25, %376, %377, %378, %22, %379, %15, %22, %22, %20, %20), scope: __module.features/__module.features.6/__module.features.6.block/__module.features.6.block.1/__module.features.6.block.1.0 # /home/gorilla/Documents/Pytorch_static_analyzer/1_ExportingIR/.exportIRvenv/lib/python3.12/site-packages/torch/nn/modules/conv.py:548:0
+  %running_var.101 : Tensor = prim::GetAttr[name="running_var"](%_1.45)
+  %running_mean.101 : Tensor = prim::GetAttr[name="running_mean"](%_1.45)
+  %bias.149 : Tensor = prim::GetAttr[name="bias"](%_1.45)
+  %weight.251 : Tensor = prim::GetAttr[name="weight"](%_1.45)
+  %input.119 : Float(1, 240, 14, 14, strides=[47040, 196, 14, 1], requires_grad=0, device=cpu) = aten::batch_norm(%input.117, %weight.251, %bias.149, %running_mean.101, %running_var.101, %22, %27, %26, %20), scope: __module.features/__module.features.6/__module.features.6.block/__module.features.6.block.1/__module.features.6.block.1.1 # /home/gorilla/Documents/Pytorch_static_analyzer/1_ExportingIR/.exportIRvenv/lib/python3.12/site-packages/torch/nn/functional.py:2846:0
+  %input.121 : Float(1, 240, 14, 14, strides=[47040, 196, 14, 1], requires_grad=0, device=cpu) = aten::hardswish_(%input.119), scope: __module.features/__module.features.6/__module.features.6.block/__module.features.6.block.1/__module.features.6.block.1.2 # /home/gorilla/Documents/Pytorch_static_analyzer/1_ExportingIR/.exportIRvenv/lib/python3.12/site-packages/torch/nn/functional.py:2439:0
+  %scale_activation.7 : __torch__.torch.nn.modules.activation.___torch_mangle_85.Hardsigmoid = prim::GetAttr[name="scale_activation"](%_2.37)
+  %fc2.7 : __torch__.torch.nn.modules.conv.___torch_mangle_83.Conv2d = prim::GetAttr[name="fc2"](%_2.37)
+  %activation.7 : __torch__.torch.nn.modules.activation.___torch_mangle_84.ReLU = prim::GetAttr[name="activation"](%_2.37)
+  %fc1.7 : __torch__.torch.nn.modules.conv.___torch_mangle_82.Conv2d = prim::GetAttr[name="fc1"](%_2.37)
+  %avgpool.7 : __torch__.torch.nn.modules.pooling.___torch_mangle_81.AdaptiveAvgPool2d = prim::GetAttr[name="avgpool"](%_2.37)
+  %392 : int[] = prim::ListConstruct(%23, %23), scope: __module.features/__module.features.6/__module.features.6.block/__module.features.6.block.2/__module.features.6.block.2.avgpool
+  %input.123 : Float(1, 240, 1, 1, strides=[240, 1, 1, 1], requires_grad=0, device=cpu) = aten::adaptive_avg_pool2d(%input.121, %392), scope: __module.features/__module.features.6/__module.features.6.block/__module.features.6.block.2/__module.features.6.block.2.avgpool # /home/gorilla/Documents/Pytorch_static_analyzer/1_ExportingIR/.exportIRvenv/lib/python3.12/site-packages/torch/nn/functional.py:1397:0
+  %bias.151 : Tensor = prim::GetAttr[name="bias"](%fc1.7)
+  %weight.253 : Tensor = prim::GetAttr[name="weight"](%fc1.7)
+  %396 : int[] = prim::ListConstruct(%23, %23), scope: __module.features/__module.features.6/__module.features.6.block/__module.features.6.block.2/__module.features.6.block.2.fc1
+  %397 : int[] = prim::ListConstruct(%21, %21), scope: __module.features/__module.features.6/__module.features.6.block/__module.features.6.block.2/__module.features.6.block.2.fc1
+  %398 : int[] = prim::ListConstruct(%23, %23), scope: __module.features/__module.features.6/__module.features.6.block/__module.features.6.block.2/__module.features.6.block.2.fc1
+  %399 : int[] = prim::ListConstruct(%21, %21), scope: __module.features/__module.features.6/__module.features.6.block/__module.features.6.block.2/__module.features.6.block.2.fc1
+  %input.125 : Float(1, 64, 1, 1, strides=[64, 1, 1, 1], requires_grad=0, device=cpu) = aten::_convolution(%input.123, %weight.253, %bias.151, %396, %397, %398, %22, %399, %23, %22, %22, %20, %20), scope: __module.features/__module.features.6/__module.features.6.block/__module.features.6.block.2/__module.features.6.block.2.fc1 # /home/gorilla/Documents/Pytorch_static_analyzer/1_ExportingIR/.exportIRvenv/lib/python3.12/site-packages/torch/nn/modules/conv.py:548:0
+  %input.127 : Float(1, 64, 1, 1, strides=[64, 1, 1, 1], requires_grad=0, device=cpu) = aten::relu(%input.125), scope: __module.features/__module.features.6/__module.features.6.block/__module.features.6.block.2/__module.features.6.block.2.activation # /home/gorilla/Documents/Pytorch_static_analyzer/1_ExportingIR/.exportIRvenv/lib/python3.12/site-packages/torch/nn/functional.py:1721:0
+  %bias.153 : Tensor = prim::GetAttr[name="bias"](%fc2.7)
+  %weight.255 : Tensor = prim::GetAttr[name="weight"](%fc2.7)
+  %404 : int[] = prim::ListConstruct(%23, %23), scope: __module.features/__module.features.6/__module.features.6.block/__module.features.6.block.2/__module.features.6.block.2.fc2
+  %405 : int[] = prim::ListConstruct(%21, %21), scope: __module.features/__module.features.6/__module.features.6.block/__module.features.6.block.2/__module.features.6.block.2.fc2
+  %406 : int[] = prim::ListConstruct(%23, %23), scope: __module.features/__module.features.6/__module.features.6.block/__module.features.6.block.2/__module.features.6.block.2.fc2
+  %407 : int[] = prim::ListConstruct(%21, %21), scope: __module.features/__module.features.6/__module.features.6.block/__module.features.6.block.2/__module.features.6.block.2.fc2
+  %input.129 : Float(1, 240, 1, 1, strides=[240, 1, 1, 1], requires_grad=0, device=cpu) = aten::_convolution(%input.127, %weight.255, %bias.153, %404, %405, %406, %22, %407, %23, %22, %22, %20, %20), scope: __module.features/__module.features.6/__module.features.6.block/__module.features.6.block.2/__module.features.6.block.2.fc2 # /home/gorilla/Documents/Pytorch_static_analyzer/1_ExportingIR/.exportIRvenv/lib/python3.12/site-packages/torch/nn/modules/conv.py:548:0
+  %scale.7 : Float(1, 240, 1, 1, strides=[240, 1, 1, 1], requires_grad=0, device=cpu) = aten::hardsigmoid(%input.129), scope: __module.features/__module.features.6/__module.features.6.block/__module.features.6.block.2/__module.features.6.block.2.scale_activation # /home/gorilla/Documents/Pytorch_static_analyzer/1_ExportingIR/.exportIRvenv/lib/python3.12/site-packages/torch/nn/functional.py:2323:0
+  %input.131 : Float(1, 240, 14, 14, strides=[47040, 196, 14, 1], requires_grad=0, device=cpu) = aten::mul(%scale.7, %input.121), scope: __module.features/__module.features.6/__module.features.6.block/__module.features.6.block.2 # /home/gorilla/Documents/Pytorch_static_analyzer/1_ExportingIR/.exportIRvenv/lib/python3.12/site-packages/torchvision/ops/misc.py:261:0
+  %_1.49 : __torch__.torch.nn.modules.batchnorm.___torch_mangle_88.BatchNorm2d = prim::GetAttr[name="1"](%_3.7)
+  %_0.49 : __torch__.torch.nn.modules.conv.___torch_mangle_87.Conv2d = prim::GetAttr[name="0"](%_3.7)
+  %weight.257 : Tensor = prim::GetAttr[name="weight"](%_0.49)
+  %414 : int[] = prim::ListConstruct(%23, %23), scope: __module.features/__module.features.6/__module.features.6.block/__module.features.6.block.3/__module.features.6.block.3.0
+  %415 : int[] = prim::ListConstruct(%21, %21), scope: __module.features/__module.features.6/__module.features.6.block/__module.features.6.block.3/__module.features.6.block.3.0
+  %416 : int[] = prim::ListConstruct(%23, %23), scope: __module.features/__module.features.6/__module.features.6.block/__module.features.6.block.3/__module.features.6.block.3.0
+  %417 : int[] = prim::ListConstruct(%21, %21), scope: __module.features/__module.features.6/__module.features.6.block/__module.features.6.block.3/__module.features.6.block.3.0
+  %input.133 : Float(1, 40, 14, 14, strides=[7840, 196, 14, 1], requires_grad=0, device=cpu) = aten::_convolution(%input.131, %weight.257, %25, %414, %415, %416, %22, %417, %23, %22, %22, %20, %20), scope: __module.features/__module.features.6/__module.features.6.block/__module.features.6.block.3/__module.features.6.block.3.0 # /home/gorilla/Documents/Pytorch_static_analyzer/1_ExportingIR/.exportIRvenv/lib/python3.12/site-packages/torch/nn/modules/conv.py:548:0
+  %running_var.103 : Tensor = prim::GetAttr[name="running_var"](%_1.49)
+  %running_mean.103 : Tensor = prim::GetAttr[name="running_mean"](%_1.49)
+  %bias.155 : Tensor = prim::GetAttr[name="bias"](%_1.49)
+  %weight.259 : Tensor = prim::GetAttr[name="weight"](%_1.49)
+  %result.5 : Float(1, 40, 14, 14, strides=[7840, 196, 14, 1], requires_grad=0, device=cpu) = aten::batch_norm(%input.133, %weight.259, %bias.155, %running_mean.103, %running_var.103, %22, %27, %26, %20), scope: __module.features/__module.features.6/__module.features.6.block/__module.features.6.block.3/__module.features.6.block.3.1 # /home/gorilla/Documents/Pytorch_static_analyzer/1_ExportingIR/.exportIRvenv/lib/python3.12/site-packages/torch/nn/functional.py:2846:0
+  %input.135 : Float(1, 40, 14, 14, strides=[7840, 196, 14, 1], requires_grad=0, device=cpu) = aten::add_(%result.5, %input.109, %23), scope: __module.features/__module.features.6 # /home/gorilla/Documents/Pytorch_static_analyzer/1_ExportingIR/.exportIRvenv/lib/python3.12/site-packages/torchvision/models/mobilenetv3.py:114:0
+  %block.13 : __torch__.torch.nn.modules.container.___torch_mangle_109.Sequential = prim::GetAttr[name="block"](%_7)
+  %_3.9 : __torch__.torchvision.ops.misc.___torch_mangle_108.Conv2dNormActivation = prim::GetAttr[name="3"](%block.13)
+  %_2.43 : __torch__.torchvision.ops.misc.___torch_mangle_105.SqueezeExcitation = prim::GetAttr[name="2"](%block.13)
+  %_1.55 : __torch__.torchvision.ops.misc.___torch_mangle_99.Conv2dNormActivation = prim::GetAttr[name="1"](%block.13)
+  %_0.53 : __torch__.torchvision.ops.misc.___torch_mangle_95.Conv2dNormActivation = prim::GetAttr[name="0"](%block.13)
+  %_2.39 : __torch__.torch.nn.modules.activation.___torch_mangle_94.Hardswish = prim::GetAttr[name="2"](%_0.53)
+  %_1.51 : __torch__.torch.nn.modules.batchnorm.___torch_mangle_93.BatchNorm2d = prim::GetAttr[name="1"](%_0.53)
+  %_0.51 : __torch__.torch.nn.modules.conv.___torch_mangle_92.Conv2d = prim::GetAttr[name="0"](%_0.53)
+  %weight.261 : Tensor = prim::GetAttr[name="weight"](%_0.51)
+  %434 : int[] = prim::ListConstruct(%23, %23), scope: __module.features/__module.features.7/__module.features.7.block/__module.features.7.block.0/__module.features.7.block.0.0
+  %435 : int[] = prim::ListConstruct(%21, %21), scope: __module.features/__module.features.7/__module.features.7.block/__module.features.7.block.0/__module.features.7.block.0.0
+  %436 : int[] = prim::ListConstruct(%23, %23), scope: __module.features/__module.features.7/__module.features.7.block/__module.features.7.block.0/__module.features.7.block.0.0
+  %437 : int[] = prim::ListConstruct(%21, %21), scope: __module.features/__module.features.7/__module.features.7.block/__module.features.7.block.0/__module.features.7.block.0.0
+  %input.137 : Float(1, 120, 14, 14, strides=[23520, 196, 14, 1], requires_grad=0, device=cpu) = aten::_convolution(%input.135, %weight.261, %25, %434, %435, %436, %22, %437, %23, %22, %22, %20, %20), scope: __module.features/__module.features.7/__module.features.7.block/__module.features.7.block.0/__module.features.7.block.0.0 # /home/gorilla/Documents/Pytorch_static_analyzer/1_ExportingIR/.exportIRvenv/lib/python3.12/site-packages/torch/nn/modules/conv.py:548:0
+  %running_var.105 : Tensor = prim::GetAttr[name="running_var"](%_1.51)
+  %running_mean.105 : Tensor = prim::GetAttr[name="running_mean"](%_1.51)
+  %bias.157 : Tensor = prim::GetAttr[name="bias"](%_1.51)
+  %weight.263 : Tensor = prim::GetAttr[name="weight"](%_1.51)
+  %input.139 : Float(1, 120, 14, 14, strides=[23520, 196, 14, 1], requires_grad=0, device=cpu) = aten::batch_norm(%input.137, %weight.263, %bias.157, %running_mean.105, %running_var.105, %22, %27, %26, %20), scope: __module.features/__module.features.7/__module.features.7.block/__module.features.7.block.0/__module.features.7.block.0.1 # /home/gorilla/Documents/Pytorch_static_analyzer/1_ExportingIR/.exportIRvenv/lib/python3.12/site-packages/torch/nn/functional.py:2846:0
+  %input.141 : Float(1, 120, 14, 14, strides=[23520, 196, 14, 1], requires_grad=0, device=cpu) = aten::hardswish_(%input.139), scope: __module.features/__module.features.7/__module.features.7.block/__module.features.7.block.0/__module.features.7.block.0.2 # /home/gorilla/Documents/Pytorch_static_analyzer/1_ExportingIR/.exportIRvenv/lib/python3.12/site-packages/torch/nn/functional.py:2439:0
+  %_2.41 : __torch__.torch.nn.modules.activation.___torch_mangle_98.Hardswish = prim::GetAttr[name="2"](%_1.55)
+  %_1.53 : __torch__.torch.nn.modules.batchnorm.___torch_mangle_97.BatchNorm2d = prim::GetAttr[name="1"](%_1.55)
+  %_0.55 : __torch__.torch.nn.modules.conv.___torch_mangle_96.Conv2d = prim::GetAttr[name="0"](%_1.55)
+  %weight.265 : Tensor = prim::GetAttr[name="weight"](%_0.55)
+  %449 : int[] = prim::ListConstruct(%23, %23), scope: __module.features/__module.features.7/__module.features.7.block/__module.features.7.block.1/__module.features.7.block.1.0
+  %450 : int[] = prim::ListConstruct(%24, %24), scope: __module.features/__module.features.7/__module.features.7.block/__module.features.7.block.1/__module.features.7.block.1.0
+  %451 : int[] = prim::ListConstruct(%23, %23), scope: __module.features/__module.features.7/__module.features.7.block/__module.features.7.block.1/__module.features.7.block.1.0
+  %452 : int[] = prim::ListConstruct(%21, %21), scope: __module.features/__module.features.7/__module.features.7.block/__module.features.7.block.1/__module.features.7.block.1.0
+  %input.143 : Float(1, 120, 14, 14, strides=[23520, 196, 14, 1], requires_grad=0, device=cpu) = aten::_convolution(%input.141, %weight.265, %25, %449, %450, %451, %22, %452, %14, %22, %22, %20, %20), scope: __module.features/__module.features.7/__module.features.7.block/__module.features.7.block.1/__module.features.7.block.1.0 # /home/gorilla/Documents/Pytorch_static_analyzer/1_ExportingIR/.exportIRvenv/lib/python3.12/site-packages/torch/nn/modules/conv.py:548:0
+  %running_var.107 : Tensor = prim::GetAttr[name="running_var"](%_1.53)
+  %running_mean.107 : Tensor = prim::GetAttr[name="running_mean"](%_1.53)
+  %bias.159 : Tensor = prim::GetAttr[name="bias"](%_1.53)
+  %weight.267 : Tensor = prim::GetAttr[name="weight"](%_1.53)
+  %input.145 : Float(1, 120, 14, 14, strides=[23520, 196, 14, 1], requires_grad=0, device=cpu) = aten::batch_norm(%input.143, %weight.267, %bias.159, %running_mean.107, %running_var.107, %22, %27, %26, %20), scope: __module.features/__module.features.7/__module.features.7.block/__module.features.7.block.1/__module.features.7.block.1.1 # /home/gorilla/Documents/Pytorch_static_analyzer/1_ExportingIR/.exportIRvenv/lib/python3.12/site-packages/torch/nn/functional.py:2846:0
+  %input.147 : Float(1, 120, 14, 14, strides=[23520, 196, 14, 1], requires_grad=0, device=cpu) = aten::hardswish_(%input.145), scope: __module.features/__module.features.7/__module.features.7.block/__module.features.7.block.1/__module.features.7.block.1.2 # /home/gorilla/Documents/Pytorch_static_analyzer/1_ExportingIR/.exportIRvenv/lib/python3.12/site-packages/torch/nn/functional.py:2439:0
+  %scale_activation.9 : __torch__.torch.nn.modules.activation.___torch_mangle_104.Hardsigmoid = prim::GetAttr[name="scale_activation"](%_2.43)
+  %fc2.9 : __torch__.torch.nn.modules.conv.___torch_mangle_102.Conv2d = prim::GetAttr[name="fc2"](%_2.43)
+  %activation.9 : __torch__.torch.nn.modules.activation.___torch_mangle_103.ReLU = prim::GetAttr[name="activation"](%_2.43)
+  %fc1.9 : __torch__.torch.nn.modules.conv.___torch_mangle_101.Conv2d = prim::GetAttr[name="fc1"](%_2.43)
+  %avgpool.9 : __torch__.torch.nn.modules.pooling.___torch_mangle_100.AdaptiveAvgPool2d = prim::GetAttr[name="avgpool"](%_2.43)
+  %465 : int[] = prim::ListConstruct(%23, %23), scope: __module.features/__module.features.7/__module.features.7.block/__module.features.7.block.2/__module.features.7.block.2.avgpool
+  %input.149 : Float(1, 120, 1, 1, strides=[120, 1, 1, 1], requires_grad=0, device=cpu) = aten::adaptive_avg_pool2d(%input.147, %465), scope: __module.features/__module.features.7/__module.features.7.block/__module.features.7.block.2/__module.features.7.block.2.avgpool # /home/gorilla/Documents/Pytorch_static_analyzer/1_ExportingIR/.exportIRvenv/lib/python3.12/site-packages/torch/nn/functional.py:1397:0
+  %bias.161 : Tensor = prim::GetAttr[name="bias"](%fc1.9)
+  %weight.269 : Tensor = prim::GetAttr[name="weight"](%fc1.9)
+  %469 : int[] = prim::ListConstruct(%23, %23), scope: __module.features/__module.features.7/__module.features.7.block/__module.features.7.block.2/__module.features.7.block.2.fc1
+  %470 : int[] = prim::ListConstruct(%21, %21), scope: __module.features/__module.features.7/__module.features.7.block/__module.features.7.block.2/__module.features.7.block.2.fc1
+  %471 : int[] = prim::ListConstruct(%23, %23), scope: __module.features/__module.features.7/__module.features.7.block/__module.features.7.block.2/__module.features.7.block.2.fc1
+  %472 : int[] = prim::ListConstruct(%21, %21), scope: __module.features/__module.features.7/__module.features.7.block/__module.features.7.block.2/__module.features.7.block.2.fc1
+  %input.151 : Float(1, 32, 1, 1, strides=[32, 1, 1, 1], requires_grad=0, device=cpu) = aten::_convolution(%input.149, %weight.269, %bias.161, %469, %470, %471, %22, %472, %23, %22, %22, %20, %20), scope: __module.features/__module.features.7/__module.features.7.block/__module.features.7.block.2/__module.features.7.block.2.fc1 # /home/gorilla/Documents/Pytorch_static_analyzer/1_ExportingIR/.exportIRvenv/lib/python3.12/site-packages/torch/nn/modules/conv.py:548:0
+  %input.153 : Float(1, 32, 1, 1, strides=[32, 1, 1, 1], requires_grad=0, device=cpu) = aten::relu(%input.151), scope: __module.features/__module.features.7/__module.features.7.block/__module.features.7.block.2/__module.features.7.block.2.activation # /home/gorilla/Documents/Pytorch_static_analyzer/1_ExportingIR/.exportIRvenv/lib/python3.12/site-packages/torch/nn/functional.py:1721:0
+  %bias.163 : Tensor = prim::GetAttr[name="bias"](%fc2.9)
+  %weight.271 : Tensor = prim::GetAttr[name="weight"](%fc2.9)
+  %477 : int[] = prim::ListConstruct(%23, %23), scope: __module.features/__module.features.7/__module.features.7.block/__module.features.7.block.2/__module.features.7.block.2.fc2
+  %478 : int[] = prim::ListConstruct(%21, %21), scope: __module.features/__module.features.7/__module.features.7.block/__module.features.7.block.2/__module.features.7.block.2.fc2
+  %479 : int[] = prim::ListConstruct(%23, %23), scope: __module.features/__module.features.7/__module.features.7.block/__module.features.7.block.2/__module.features.7.block.2.fc2
+  %480 : int[] = prim::ListConstruct(%21, %21), scope: __module.features/__module.features.7/__module.features.7.block/__module.features.7.block.2/__module.features.7.block.2.fc2
+  %input.155 : Float(1, 120, 1, 1, strides=[120, 1, 1, 1], requires_grad=0, device=cpu) = aten::_convolution(%input.153, %weight.271, %bias.163, %477, %478, %479, %22, %480, %23, %22, %22, %20, %20), scope: __module.features/__module.features.7/__module.features.7.block/__module.features.7.block.2/__module.features.7.block.2.fc2 # /home/gorilla/Documents/Pytorch_static_analyzer/1_ExportingIR/.exportIRvenv/lib/python3.12/site-packages/torch/nn/modules/conv.py:548:0
+  %scale.9 : Float(1, 120, 1, 1, strides=[120, 1, 1, 1], requires_grad=0, device=cpu) = aten::hardsigmoid(%input.155), scope: __module.features/__module.features.7/__module.features.7.block/__module.features.7.block.2/__module.features.7.block.2.scale_activation # /home/gorilla/Documents/Pytorch_static_analyzer/1_ExportingIR/.exportIRvenv/lib/python3.12/site-packages/torch/nn/functional.py:2323:0
+  %input.157 : Float(1, 120, 14, 14, strides=[23520, 196, 14, 1], requires_grad=0, device=cpu) = aten::mul(%scale.9, %input.147), scope: __module.features/__module.features.7/__module.features.7.block/__module.features.7.block.2 # /home/gorilla/Documents/Pytorch_static_analyzer/1_ExportingIR/.exportIRvenv/lib/python3.12/site-packages/torchvision/ops/misc.py:261:0
+  %_1.57 : __torch__.torch.nn.modules.batchnorm.___torch_mangle_107.BatchNorm2d = prim::GetAttr[name="1"](%_3.9)
+  %_0.57 : __torch__.torch.nn.modules.conv.___torch_mangle_106.Conv2d = prim::GetAttr[name="0"](%_3.9)
+  %weight.273 : Tensor = prim::GetAttr[name="weight"](%_0.57)
+  %487 : int[] = prim::ListConstruct(%23, %23), scope: __module.features/__module.features.7/__module.features.7.block/__module.features.7.block.3/__module.features.7.block.3.0
+  %488 : int[] = prim::ListConstruct(%21, %21), scope: __module.features/__module.features.7/__module.features.7.block/__module.features.7.block.3/__module.features.7.block.3.0
+  %489 : int[] = prim::ListConstruct(%23, %23), scope: __module.features/__module.features.7/__module.features.7.block/__module.features.7.block.3/__module.features.7.block.3.0
+  %490 : int[] = prim::ListConstruct(%21, %21), scope: __module.features/__module.features.7/__module.features.7.block/__module.features.7.block.3/__module.features.7.block.3.0
+  %input.159 : Float(1, 48, 14, 14, strides=[9408, 196, 14, 1], requires_grad=0, device=cpu) = aten::_convolution(%input.157, %weight.273, %25, %487, %488, %489, %22, %490, %23, %22, %22, %20, %20), scope: __module.features/__module.features.7/__module.features.7.block/__module.features.7.block.3/__module.features.7.block.3.0 # /home/gorilla/Documents/Pytorch_static_analyzer/1_ExportingIR/.exportIRvenv/lib/python3.12/site-packages/torch/nn/modules/conv.py:548:0
+  %running_var.109 : Tensor = prim::GetAttr[name="running_var"](%_1.57)
+  %running_mean.109 : Tensor = prim::GetAttr[name="running_mean"](%_1.57)
+  %bias.165 : Tensor = prim::GetAttr[name="bias"](%_1.57)
+  %weight.275 : Tensor = prim::GetAttr[name="weight"](%_1.57)
+  %input.161 : Float(1, 48, 14, 14, strides=[9408, 196, 14, 1], requires_grad=0, device=cpu) = aten::batch_norm(%input.159, %weight.275, %bias.165, %running_mean.109, %running_var.109, %22, %27, %26, %20), scope: __module.features/__module.features.7/__module.features.7.block/__module.features.7.block.3/__module.features.7.block.3.1 # /home/gorilla/Documents/Pytorch_static_analyzer/1_ExportingIR/.exportIRvenv/lib/python3.12/site-packages/torch/nn/functional.py:2846:0
+  %block.15 : __torch__.torch.nn.modules.container.___torch_mangle_128.Sequential = prim::GetAttr[name="block"](%_8)
+  %_3.11 : __torch__.torchvision.ops.misc.___torch_mangle_127.Conv2dNormActivation = prim::GetAttr[name="3"](%block.15)
+  %_2.49 : __torch__.torchvision.ops.misc.___torch_mangle_124.SqueezeExcitation = prim::GetAttr[name="2"](%block.15)
+  %_1.63 : __torch__.torchvision.ops.misc.___torch_mangle_118.Conv2dNormActivation = prim::GetAttr[name="1"](%block.15)
+  %_0.61 : __torch__.torchvision.ops.misc.___torch_mangle_114.Conv2dNormActivation = prim::GetAttr[name="0"](%block.15)
+  %_2.45 : __torch__.torch.nn.modules.activation.___torch_mangle_113.Hardswish = prim::GetAttr[name="2"](%_0.61)
+  %_1.59 : __torch__.torch.nn.modules.batchnorm.___torch_mangle_112.BatchNorm2d = prim::GetAttr[name="1"](%_0.61)
+  %_0.59 : __torch__.torch.nn.modules.conv.___torch_mangle_111.Conv2d = prim::GetAttr[name="0"](%_0.61)
+  %weight.277 : Tensor = prim::GetAttr[name="weight"](%_0.59)
+  %506 : int[] = prim::ListConstruct(%23, %23), scope: __module.features/__module.features.8/__module.features.8.block/__module.features.8.block.0/__module.features.8.block.0.0
+  %507 : int[] = prim::ListConstruct(%21, %21), scope: __module.features/__module.features.8/__module.features.8.block/__module.features.8.block.0/__module.features.8.block.0.0
+  %508 : int[] = prim::ListConstruct(%23, %23), scope: __module.features/__module.features.8/__module.features.8.block/__module.features.8.block.0/__module.features.8.block.0.0
+  %509 : int[] = prim::ListConstruct(%21, %21), scope: __module.features/__module.features.8/__module.features.8.block/__module.features.8.block.0/__module.features.8.block.0.0
+  %input.163 : Float(1, 144, 14, 14, strides=[28224, 196, 14, 1], requires_grad=0, device=cpu) = aten::_convolution(%input.161, %weight.277, %25, %506, %507, %508, %22, %509, %23, %22, %22, %20, %20), scope: __module.features/__module.features.8/__module.features.8.block/__module.features.8.block.0/__module.features.8.block.0.0 # /home/gorilla/Documents/Pytorch_static_analyzer/1_ExportingIR/.exportIRvenv/lib/python3.12/site-packages/torch/nn/modules/conv.py:548:0
+  %running_var.111 : Tensor = prim::GetAttr[name="running_var"](%_1.59)
+  %running_mean.111 : Tensor = prim::GetAttr[name="running_mean"](%_1.59)
+  %bias.167 : Tensor = prim::GetAttr[name="bias"](%_1.59)
+  %weight.279 : Tensor = prim::GetAttr[name="weight"](%_1.59)
+  %input.165 : Float(1, 144, 14, 14, strides=[28224, 196, 14, 1], requires_grad=0, device=cpu) = aten::batch_norm(%input.163, %weight.279, %bias.167, %running_mean.111, %running_var.111, %22, %27, %26, %20), scope: __module.features/__module.features.8/__module.features.8.block/__module.features.8.block.0/__module.features.8.block.0.1 # /home/gorilla/Documents/Pytorch_static_analyzer/1_ExportingIR/.exportIRvenv/lib/python3.12/site-packages/torch/nn/functional.py:2846:0
+  %input.167 : Float(1, 144, 14, 14, strides=[28224, 196, 14, 1], requires_grad=0, device=cpu) = aten::hardswish_(%input.165), scope: __module.features/__module.features.8/__module.features.8.block/__module.features.8.block.0/__module.features.8.block.0.2 # /home/gorilla/Documents/Pytorch_static_analyzer/1_ExportingIR/.exportIRvenv/lib/python3.12/site-packages/torch/nn/functional.py:2439:0
+  %_2.47 : __torch__.torch.nn.modules.activation.___torch_mangle_117.Hardswish = prim::GetAttr[name="2"](%_1.63)
+  %_1.61 : __torch__.torch.nn.modules.batchnorm.___torch_mangle_116.BatchNorm2d = prim::GetAttr[name="1"](%_1.63)
+  %_0.63 : __torch__.torch.nn.modules.conv.___torch_mangle_115.Conv2d = prim::GetAttr[name="0"](%_1.63)
+  %weight.281 : Tensor = prim::GetAttr[name="weight"](%_0.63)
+  %521 : int[] = prim::ListConstruct(%23, %23), scope: __module.features/__module.features.8/__module.features.8.block/__module.features.8.block.1/__module.features.8.block.1.0
+  %522 : int[] = prim::ListConstruct(%24, %24), scope: __module.features/__module.features.8/__module.features.8.block/__module.features.8.block.1/__module.features.8.block.1.0
+  %523 : int[] = prim::ListConstruct(%23, %23), scope: __module.features/__module.features.8/__module.features.8.block/__module.features.8.block.1/__module.features.8.block.1.0
+  %524 : int[] = prim::ListConstruct(%21, %21), scope: __module.features/__module.features.8/__module.features.8.block/__module.features.8.block.1/__module.features.8.block.1.0
+  %input.169 : Float(1, 144, 14, 14, strides=[28224, 196, 14, 1], requires_grad=0, device=cpu) = aten::_convolution(%input.167, %weight.281, %25, %521, %522, %523, %22, %524, %13, %22, %22, %20, %20), scope: __module.features/__module.features.8/__module.features.8.block/__module.features.8.block.1/__module.features.8.block.1.0 # /home/gorilla/Documents/Pytorch_static_analyzer/1_ExportingIR/.exportIRvenv/lib/python3.12/site-packages/torch/nn/modules/conv.py:548:0
+  %running_var.113 : Tensor = prim::GetAttr[name="running_var"](%_1.61)
+  %running_mean.113 : Tensor = prim::GetAttr[name="running_mean"](%_1.61)
+  %bias.169 : Tensor = prim::GetAttr[name="bias"](%_1.61)
+  %weight.283 : Tensor = prim::GetAttr[name="weight"](%_1.61)
+  %input.171 : Float(1, 144, 14, 14, strides=[28224, 196, 14, 1], requires_grad=0, device=cpu) = aten::batch_norm(%input.169, %weight.283, %bias.169, %running_mean.113, %running_var.113, %22, %27, %26, %20), scope: __module.features/__module.features.8/__module.features.8.block/__module.features.8.block.1/__module.features.8.block.1.1 # /home/gorilla/Documents/Pytorch_static_analyzer/1_ExportingIR/.exportIRvenv/lib/python3.12/site-packages/torch/nn/functional.py:2846:0
+  %input.173 : Float(1, 144, 14, 14, strides=[28224, 196, 14, 1], requires_grad=0, device=cpu) = aten::hardswish_(%input.171), scope: __module.features/__module.features.8/__module.features.8.block/__module.features.8.block.1/__module.features.8.block.1.2 # /home/gorilla/Documents/Pytorch_static_analyzer/1_ExportingIR/.exportIRvenv/lib/python3.12/site-packages/torch/nn/functional.py:2439:0
+  %scale_activation.11 : __torch__.torch.nn.modules.activation.___torch_mangle_123.Hardsigmoid = prim::GetAttr[name="scale_activation"](%_2.49)
+  %fc2.11 : __torch__.torch.nn.modules.conv.___torch_mangle_121.Conv2d = prim::GetAttr[name="fc2"](%_2.49)
+  %activation.11 : __torch__.torch.nn.modules.activation.___torch_mangle_122.ReLU = prim::GetAttr[name="activation"](%_2.49)
+  %fc1.11 : __torch__.torch.nn.modules.conv.___torch_mangle_120.Conv2d = prim::GetAttr[name="fc1"](%_2.49)
+  %avgpool.11 : __torch__.torch.nn.modules.pooling.___torch_mangle_119.AdaptiveAvgPool2d = prim::GetAttr[name="avgpool"](%_2.49)
+  %537 : int[] = prim::ListConstruct(%23, %23), scope: __module.features/__module.features.8/__module.features.8.block/__module.features.8.block.2/__module.features.8.block.2.avgpool
+  %input.175 : Float(1, 144, 1, 1, strides=[144, 1, 1, 1], requires_grad=0, device=cpu) = aten::adaptive_avg_pool2d(%input.173, %537), scope: __module.features/__module.features.8/__module.features.8.block/__module.features.8.block.2/__module.features.8.block.2.avgpool # /home/gorilla/Documents/Pytorch_static_analyzer/1_ExportingIR/.exportIRvenv/lib/python3.12/site-packages/torch/nn/functional.py:1397:0
+  %bias.171 : Tensor = prim::GetAttr[name="bias"](%fc1.11)
+  %weight.285 : Tensor = prim::GetAttr[name="weight"](%fc1.11)
+  %541 : int[] = prim::ListConstruct(%23, %23), scope: __module.features/__module.features.8/__module.features.8.block/__module.features.8.block.2/__module.features.8.block.2.fc1
+  %542 : int[] = prim::ListConstruct(%21, %21), scope: __module.features/__module.features.8/__module.features.8.block/__module.features.8.block.2/__module.features.8.block.2.fc1
+  %543 : int[] = prim::ListConstruct(%23, %23), scope: __module.features/__module.features.8/__module.features.8.block/__module.features.8.block.2/__module.features.8.block.2.fc1
+  %544 : int[] = prim::ListConstruct(%21, %21), scope: __module.features/__module.features.8/__module.features.8.block/__module.features.8.block.2/__module.features.8.block.2.fc1
+  %input.177 : Float(1, 40, 1, 1, strides=[40, 1, 1, 1], requires_grad=0, device=cpu) = aten::_convolution(%input.175, %weight.285, %bias.171, %541, %542, %543, %22, %544, %23, %22, %22, %20, %20), scope: __module.features/__module.features.8/__module.features.8.block/__module.features.8.block.2/__module.features.8.block.2.fc1 # /home/gorilla/Documents/Pytorch_static_analyzer/1_ExportingIR/.exportIRvenv/lib/python3.12/site-packages/torch/nn/modules/conv.py:548:0
+  %input.179 : Float(1, 40, 1, 1, strides=[40, 1, 1, 1], requires_grad=0, device=cpu) = aten::relu(%input.177), scope: __module.features/__module.features.8/__module.features.8.block/__module.features.8.block.2/__module.features.8.block.2.activation # /home/gorilla/Documents/Pytorch_static_analyzer/1_ExportingIR/.exportIRvenv/lib/python3.12/site-packages/torch/nn/functional.py:1721:0
+  %bias.173 : Tensor = prim::GetAttr[name="bias"](%fc2.11)
+  %weight.287 : Tensor = prim::GetAttr[name="weight"](%fc2.11)
+  %549 : int[] = prim::ListConstruct(%23, %23), scope: __module.features/__module.features.8/__module.features.8.block/__module.features.8.block.2/__module.features.8.block.2.fc2
+  %550 : int[] = prim::ListConstruct(%21, %21), scope: __module.features/__module.features.8/__module.features.8.block/__module.features.8.block.2/__module.features.8.block.2.fc2
+  %551 : int[] = prim::ListConstruct(%23, %23), scope: __module.features/__module.features.8/__module.features.8.block/__module.features.8.block.2/__module.features.8.block.2.fc2
+  %552 : int[] = prim::ListConstruct(%21, %21), scope: __module.features/__module.features.8/__module.features.8.block/__module.features.8.block.2/__module.features.8.block.2.fc2
+  %input.181 : Float(1, 144, 1, 1, strides=[144, 1, 1, 1], requires_grad=0, device=cpu) = aten::_convolution(%input.179, %weight.287, %bias.173, %549, %550, %551, %22, %552, %23, %22, %22, %20, %20), scope: __module.features/__module.features.8/__module.features.8.block/__module.features.8.block.2/__module.features.8.block.2.fc2 # /home/gorilla/Documents/Pytorch_static_analyzer/1_ExportingIR/.exportIRvenv/lib/python3.12/site-packages/torch/nn/modules/conv.py:548:0
+  %scale.11 : Float(1, 144, 1, 1, strides=[144, 1, 1, 1], requires_grad=0, device=cpu) = aten::hardsigmoid(%input.181), scope: __module.features/__module.features.8/__module.features.8.block/__module.features.8.block.2/__module.features.8.block.2.scale_activation # /home/gorilla/Documents/Pytorch_static_analyzer/1_ExportingIR/.exportIRvenv/lib/python3.12/site-packages/torch/nn/functional.py:2323:0
+  %input.183 : Float(1, 144, 14, 14, strides=[28224, 196, 14, 1], requires_grad=0, device=cpu) = aten::mul(%scale.11, %input.173), scope: __module.features/__module.features.8/__module.features.8.block/__module.features.8.block.2 # /home/gorilla/Documents/Pytorch_static_analyzer/1_ExportingIR/.exportIRvenv/lib/python3.12/site-packages/torchvision/ops/misc.py:261:0
+  %_1.65 : __torch__.torch.nn.modules.batchnorm.___torch_mangle_126.BatchNorm2d = prim::GetAttr[name="1"](%_3.11)
+  %_0.65 : __torch__.torch.nn.modules.conv.___torch_mangle_125.Conv2d = prim::GetAttr[name="0"](%_3.11)
+  %weight.289 : Tensor = prim::GetAttr[name="weight"](%_0.65)
+  %559 : int[] = prim::ListConstruct(%23, %23), scope: __module.features/__module.features.8/__module.features.8.block/__module.features.8.block.3/__module.features.8.block.3.0
+  %560 : int[] = prim::ListConstruct(%21, %21), scope: __module.features/__module.features.8/__module.features.8.block/__module.features.8.block.3/__module.features.8.block.3.0
+  %561 : int[] = prim::ListConstruct(%23, %23), scope: __module.features/__module.features.8/__module.features.8.block/__module.features.8.block.3/__module.features.8.block.3.0
+  %562 : int[] = prim::ListConstruct(%21, %21), scope: __module.features/__module.features.8/__module.features.8.block/__module.features.8.block.3/__module.features.8.block.3.0
+  %input.185 : Float(1, 48, 14, 14, strides=[9408, 196, 14, 1], requires_grad=0, device=cpu) = aten::_convolution(%input.183, %weight.289, %25, %559, %560, %561, %22, %562, %23, %22, %22, %20, %20), scope: __module.features/__module.features.8/__module.features.8.block/__module.features.8.block.3/__module.features.8.block.3.0 # /home/gorilla/Documents/Pytorch_static_analyzer/1_ExportingIR/.exportIRvenv/lib/python3.12/site-packages/torch/nn/modules/conv.py:548:0
+  %running_var.115 : Tensor = prim::GetAttr[name="running_var"](%_1.65)
+  %running_mean.115 : Tensor = prim::GetAttr[name="running_mean"](%_1.65)
+  %bias.175 : Tensor = prim::GetAttr[name="bias"](%_1.65)
+  %weight.291 : Tensor = prim::GetAttr[name="weight"](%_1.65)
+  %result.7 : Float(1, 48, 14, 14, strides=[9408, 196, 14, 1], requires_grad=0, device=cpu) = aten::batch_norm(%input.185, %weight.291, %bias.175, %running_mean.115, %running_var.115, %22, %27, %26, %20), scope: __module.features/__module.features.8/__module.features.8.block/__module.features.8.block.3/__module.features.8.block.3.1 # /home/gorilla/Documents/Pytorch_static_analyzer/1_ExportingIR/.exportIRvenv/lib/python3.12/site-packages/torch/nn/functional.py:2846:0
+  %input.187 : Float(1, 48, 14, 14, strides=[9408, 196, 14, 1], requires_grad=0, device=cpu) = aten::add_(%result.7, %input.161, %23), scope: __module.features/__module.features.8 # /home/gorilla/Documents/Pytorch_static_analyzer/1_ExportingIR/.exportIRvenv/lib/python3.12/site-packages/torchvision/models/mobilenetv3.py:114:0
+  %block.17 : __torch__.torch.nn.modules.container.___torch_mangle_147.Sequential = prim::GetAttr[name="block"](%_9)
+  %_3.13 : __torch__.torchvision.ops.misc.___torch_mangle_146.Conv2dNormActivation = prim::GetAttr[name="3"](%block.17)
+  %_2.55 : __torch__.torchvision.ops.misc.___torch_mangle_143.SqueezeExcitation = prim::GetAttr[name="2"](%block.17)
+  %_1.71 : __torch__.torchvision.ops.misc.___torch_mangle_137.Conv2dNormActivation = prim::GetAttr[name="1"](%block.17)
+  %_0.69 : __torch__.torchvision.ops.misc.___torch_mangle_133.Conv2dNormActivation = prim::GetAttr[name="0"](%block.17)
+  %_2.51 : __torch__.torch.nn.modules.activation.___torch_mangle_132.Hardswish = prim::GetAttr[name="2"](%_0.69)
+  %_1.67 : __torch__.torch.nn.modules.batchnorm.___torch_mangle_131.BatchNorm2d = prim::GetAttr[name="1"](%_0.69)
+  %_0.67 : __torch__.torch.nn.modules.conv.___torch_mangle_130.Conv2d = prim::GetAttr[name="0"](%_0.69)
+  %weight.293 : Tensor = prim::GetAttr[name="weight"](%_0.67)
+  %579 : int[] = prim::ListConstruct(%23, %23), scope: __module.features/__module.features.9/__module.features.9.block/__module.features.9.block.0/__module.features.9.block.0.0
+  %580 : int[] = prim::ListConstruct(%21, %21), scope: __module.features/__module.features.9/__module.features.9.block/__module.features.9.block.0/__module.features.9.block.0.0
+  %581 : int[] = prim::ListConstruct(%23, %23), scope: __module.features/__module.features.9/__module.features.9.block/__module.features.9.block.0/__module.features.9.block.0.0
+  %582 : int[] = prim::ListConstruct(%21, %21), scope: __module.features/__module.features.9/__module.features.9.block/__module.features.9.block.0/__module.features.9.block.0.0
+  %input.189 : Float(1, 288, 14, 14, strides=[56448, 196, 14, 1], requires_grad=0, device=cpu) = aten::_convolution(%input.187, %weight.293, %25, %579, %580, %581, %22, %582, %23, %22, %22, %20, %20), scope: __module.features/__module.features.9/__module.features.9.block/__module.features.9.block.0/__module.features.9.block.0.0 # /home/gorilla/Documents/Pytorch_static_analyzer/1_ExportingIR/.exportIRvenv/lib/python3.12/site-packages/torch/nn/modules/conv.py:548:0
+  %running_var.117 : Tensor = prim::GetAttr[name="running_var"](%_1.67)
+  %running_mean.117 : Tensor = prim::GetAttr[name="running_mean"](%_1.67)
+  %bias.177 : Tensor = prim::GetAttr[name="bias"](%_1.67)
+  %weight.295 : Tensor = prim::GetAttr[name="weight"](%_1.67)
+  %input.191 : Float(1, 288, 14, 14, strides=[56448, 196, 14, 1], requires_grad=0, device=cpu) = aten::batch_norm(%input.189, %weight.295, %bias.177, %running_mean.117, %running_var.117, %22, %27, %26, %20), scope: __module.features/__module.features.9/__module.features.9.block/__module.features.9.block.0/__module.features.9.block.0.1 # /home/gorilla/Documents/Pytorch_static_analyzer/1_ExportingIR/.exportIRvenv/lib/python3.12/site-packages/torch/nn/functional.py:2846:0
+  %input.193 : Float(1, 288, 14, 14, strides=[56448, 196, 14, 1], requires_grad=0, device=cpu) = aten::hardswish_(%input.191), scope: __module.features/__module.features.9/__module.features.9.block/__module.features.9.block.0/__module.features.9.block.0.2 # /home/gorilla/Documents/Pytorch_static_analyzer/1_ExportingIR/.exportIRvenv/lib/python3.12/site-packages/torch/nn/functional.py:2439:0
+  %_2.53 : __torch__.torch.nn.modules.activation.___torch_mangle_136.Hardswish = prim::GetAttr[name="2"](%_1.71)
+  %_1.69 : __torch__.torch.nn.modules.batchnorm.___torch_mangle_135.BatchNorm2d = prim::GetAttr[name="1"](%_1.71)
+  %_0.71 : __torch__.torch.nn.modules.conv.___torch_mangle_134.Conv2d = prim::GetAttr[name="0"](%_1.71)
+  %weight.297 : Tensor = prim::GetAttr[name="weight"](%_0.71)
+  %594 : int[] = prim::ListConstruct(%24, %24), scope: __module.features/__module.features.9/__module.features.9.block/__module.features.9.block.1/__module.features.9.block.1.0
+  %595 : int[] = prim::ListConstruct(%24, %24), scope: __module.features/__module.features.9/__module.features.9.block/__module.features.9.block.1/__module.features.9.block.1.0
+  %596 : int[] = prim::ListConstruct(%23, %23), scope: __module.features/__module.features.9/__module.features.9.block/__module.features.9.block.1/__module.features.9.block.1.0
+  %597 : int[] = prim::ListConstruct(%21, %21), scope: __module.features/__module.features.9/__module.features.9.block/__module.features.9.block.1/__module.features.9.block.1.0
+  %input.195 : Float(1, 288, 7, 7, strides=[14112, 49, 7, 1], requires_grad=0, device=cpu) = aten::_convolution(%input.193, %weight.297, %25, %594, %595, %596, %22, %597, %12, %22, %22, %20, %20), scope: __module.features/__module.features.9/__module.features.9.block/__module.features.9.block.1/__module.features.9.block.1.0 # /home/gorilla/Documents/Pytorch_static_analyzer/1_ExportingIR/.exportIRvenv/lib/python3.12/site-packages/torch/nn/modules/conv.py:548:0
+  %running_var.119 : Tensor = prim::GetAttr[name="running_var"](%_1.69)
+  %running_mean.119 : Tensor = prim::GetAttr[name="running_mean"](%_1.69)
+  %bias.179 : Tensor = prim::GetAttr[name="bias"](%_1.69)
+  %weight.299 : Tensor = prim::GetAttr[name="weight"](%_1.69)
+  %input.197 : Float(1, 288, 7, 7, strides=[14112, 49, 7, 1], requires_grad=0, device=cpu) = aten::batch_norm(%input.195, %weight.299, %bias.179, %running_mean.119, %running_var.119, %22, %27, %26, %20), scope: __module.features/__module.features.9/__module.features.9.block/__module.features.9.block.1/__module.features.9.block.1.1 # /home/gorilla/Documents/Pytorch_static_analyzer/1_ExportingIR/.exportIRvenv/lib/python3.12/site-packages/torch/nn/functional.py:2846:0
+  %input.199 : Float(1, 288, 7, 7, strides=[14112, 49, 7, 1], requires_grad=0, device=cpu) = aten::hardswish_(%input.197), scope: __module.features/__module.features.9/__module.features.9.block/__module.features.9.block.1/__module.features.9.block.1.2 # /home/gorilla/Documents/Pytorch_static_analyzer/1_ExportingIR/.exportIRvenv/lib/python3.12/site-packages/torch/nn/functional.py:2439:0
+  %scale_activation.13 : __torch__.torch.nn.modules.activation.___torch_mangle_142.Hardsigmoid = prim::GetAttr[name="scale_activation"](%_2.55)
+  %fc2.13 : __torch__.torch.nn.modules.conv.___torch_mangle_140.Conv2d = prim::GetAttr[name="fc2"](%_2.55)
+  %activation.13 : __torch__.torch.nn.modules.activation.___torch_mangle_141.ReLU = prim::GetAttr[name="activation"](%_2.55)
+  %fc1.13 : __torch__.torch.nn.modules.conv.___torch_mangle_139.Conv2d = prim::GetAttr[name="fc1"](%_2.55)
+  %avgpool.13 : __torch__.torch.nn.modules.pooling.___torch_mangle_138.AdaptiveAvgPool2d = prim::GetAttr[name="avgpool"](%_2.55)
+  %610 : int[] = prim::ListConstruct(%23, %23), scope: __module.features/__module.features.9/__module.features.9.block/__module.features.9.block.2/__module.features.9.block.2.avgpool
+  %input.201 : Float(1, 288, 1, 1, strides=[288, 1, 1, 1], requires_grad=0, device=cpu) = aten::adaptive_avg_pool2d(%input.199, %610), scope: __module.features/__module.features.9/__module.features.9.block/__module.features.9.block.2/__module.features.9.block.2.avgpool # /home/gorilla/Documents/Pytorch_static_analyzer/1_ExportingIR/.exportIRvenv/lib/python3.12/site-packages/torch/nn/functional.py:1397:0
+  %bias.181 : Tensor = prim::GetAttr[name="bias"](%fc1.13)
+  %weight.301 : Tensor = prim::GetAttr[name="weight"](%fc1.13)
+  %614 : int[] = prim::ListConstruct(%23, %23), scope: __module.features/__module.features.9/__module.features.9.block/__module.features.9.block.2/__module.features.9.block.2.fc1
+  %615 : int[] = prim::ListConstruct(%21, %21), scope: __module.features/__module.features.9/__module.features.9.block/__module.features.9.block.2/__module.features.9.block.2.fc1
+  %616 : int[] = prim::ListConstruct(%23, %23), scope: __module.features/__module.features.9/__module.features.9.block/__module.features.9.block.2/__module.features.9.block.2.fc1
+  %617 : int[] = prim::ListConstruct(%21, %21), scope: __module.features/__module.features.9/__module.features.9.block/__module.features.9.block.2/__module.features.9.block.2.fc1
+  %input.203 : Float(1, 72, 1, 1, strides=[72, 1, 1, 1], requires_grad=0, device=cpu) = aten::_convolution(%input.201, %weight.301, %bias.181, %614, %615, %616, %22, %617, %23, %22, %22, %20, %20), scope: __module.features/__module.features.9/__module.features.9.block/__module.features.9.block.2/__module.features.9.block.2.fc1 # /home/gorilla/Documents/Pytorch_static_analyzer/1_ExportingIR/.exportIRvenv/lib/python3.12/site-packages/torch/nn/modules/conv.py:548:0
+  %input.205 : Float(1, 72, 1, 1, strides=[72, 1, 1, 1], requires_grad=0, device=cpu) = aten::relu(%input.203), scope: __module.features/__module.features.9/__module.features.9.block/__module.features.9.block.2/__module.features.9.block.2.activation # /home/gorilla/Documents/Pytorch_static_analyzer/1_ExportingIR/.exportIRvenv/lib/python3.12/site-packages/torch/nn/functional.py:1721:0
+  %bias.183 : Tensor = prim::GetAttr[name="bias"](%fc2.13)
+  %weight.303 : Tensor = prim::GetAttr[name="weight"](%fc2.13)
+  %622 : int[] = prim::ListConstruct(%23, %23), scope: __module.features/__module.features.9/__module.features.9.block/__module.features.9.block.2/__module.features.9.block.2.fc2
+  %623 : int[] = prim::ListConstruct(%21, %21), scope: __module.features/__module.features.9/__module.features.9.block/__module.features.9.block.2/__module.features.9.block.2.fc2
+  %624 : int[] = prim::ListConstruct(%23, %23), scope: __module.features/__module.features.9/__module.features.9.block/__module.features.9.block.2/__module.features.9.block.2.fc2
+  %625 : int[] = prim::ListConstruct(%21, %21), scope: __module.features/__module.features.9/__module.features.9.block/__module.features.9.block.2/__module.features.9.block.2.fc2
+  %input.207 : Float(1, 288, 1, 1, strides=[288, 1, 1, 1], requires_grad=0, device=cpu) = aten::_convolution(%input.205, %weight.303, %bias.183, %622, %623, %624, %22, %625, %23, %22, %22, %20, %20), scope: __module.features/__module.features.9/__module.features.9.block/__module.features.9.block.2/__module.features.9.block.2.fc2 # /home/gorilla/Documents/Pytorch_static_analyzer/1_ExportingIR/.exportIRvenv/lib/python3.12/site-packages/torch/nn/modules/conv.py:548:0
+  %scale.13 : Float(1, 288, 1, 1, strides=[288, 1, 1, 1], requires_grad=0, device=cpu) = aten::hardsigmoid(%input.207), scope: __module.features/__module.features.9/__module.features.9.block/__module.features.9.block.2/__module.features.9.block.2.scale_activation # /home/gorilla/Documents/Pytorch_static_analyzer/1_ExportingIR/.exportIRvenv/lib/python3.12/site-packages/torch/nn/functional.py:2323:0
+  %input.209 : Float(1, 288, 7, 7, strides=[14112, 49, 7, 1], requires_grad=0, device=cpu) = aten::mul(%scale.13, %input.199), scope: __module.features/__module.features.9/__module.features.9.block/__module.features.9.block.2 # /home/gorilla/Documents/Pytorch_static_analyzer/1_ExportingIR/.exportIRvenv/lib/python3.12/site-packages/torchvision/ops/misc.py:261:0
+  %_1.73 : __torch__.torch.nn.modules.batchnorm.___torch_mangle_145.BatchNorm2d = prim::GetAttr[name="1"](%_3.13)
+  %_0.73 : __torch__.torch.nn.modules.conv.___torch_mangle_144.Conv2d = prim::GetAttr[name="0"](%_3.13)
+  %weight.305 : Tensor = prim::GetAttr[name="weight"](%_0.73)
+  %632 : int[] = prim::ListConstruct(%23, %23), scope: __module.features/__module.features.9/__module.features.9.block/__module.features.9.block.3/__module.features.9.block.3.0
+  %633 : int[] = prim::ListConstruct(%21, %21), scope: __module.features/__module.features.9/__module.features.9.block/__module.features.9.block.3/__module.features.9.block.3.0
+  %634 : int[] = prim::ListConstruct(%23, %23), scope: __module.features/__module.features.9/__module.features.9.block/__module.features.9.block.3/__module.features.9.block.3.0
+  %635 : int[] = prim::ListConstruct(%21, %21), scope: __module.features/__module.features.9/__module.features.9.block/__module.features.9.block.3/__module.features.9.block.3.0
+  %input.211 : Float(1, 96, 7, 7, strides=[4704, 49, 7, 1], requires_grad=0, device=cpu) = aten::_convolution(%input.209, %weight.305, %25, %632, %633, %634, %22, %635, %23, %22, %22, %20, %20), scope: __module.features/__module.features.9/__module.features.9.block/__module.features.9.block.3/__module.features.9.block.3.0 # /home/gorilla/Documents/Pytorch_static_analyzer/1_ExportingIR/.exportIRvenv/lib/python3.12/site-packages/torch/nn/modules/conv.py:548:0
+  %running_var.121 : Tensor = prim::GetAttr[name="running_var"](%_1.73)
+  %running_mean.121 : Tensor = prim::GetAttr[name="running_mean"](%_1.73)
+  %bias.185 : Tensor = prim::GetAttr[name="bias"](%_1.73)
+  %weight.307 : Tensor = prim::GetAttr[name="weight"](%_1.73)
+  %input.213 : Float(1, 96, 7, 7, strides=[4704, 49, 7, 1], requires_grad=0, device=cpu) = aten::batch_norm(%input.211, %weight.307, %bias.185, %running_mean.121, %running_var.121, %22, %27, %26, %20), scope: __module.features/__module.features.9/__module.features.9.block/__module.features.9.block.3/__module.features.9.block.3.1 # /home/gorilla/Documents/Pytorch_static_analyzer/1_ExportingIR/.exportIRvenv/lib/python3.12/site-packages/torch/nn/functional.py:2846:0
+  %block.19 : __torch__.torch.nn.modules.container.___torch_mangle_166.Sequential = prim::GetAttr[name="block"](%_10)
+  %_3.15 : __torch__.torchvision.ops.misc.___torch_mangle_165.Conv2dNormActivation = prim::GetAttr[name="3"](%block.19)
+  %_2.61 : __torch__.torchvision.ops.misc.___torch_mangle_162.SqueezeExcitation = prim::GetAttr[name="2"](%block.19)
+  %_1.79 : __torch__.torchvision.ops.misc.___torch_mangle_156.Conv2dNormActivation = prim::GetAttr[name="1"](%block.19)
+  %_0.77 : __torch__.torchvision.ops.misc.___torch_mangle_152.Conv2dNormActivation = prim::GetAttr[name="0"](%block.19)
+  %_2.57 : __torch__.torch.nn.modules.activation.___torch_mangle_151.Hardswish = prim::GetAttr[name="2"](%_0.77)
+  %_1.75 : __torch__.torch.nn.modules.batchnorm.___torch_mangle_150.BatchNorm2d = prim::GetAttr[name="1"](%_0.77)
+  %_0.75 : __torch__.torch.nn.modules.conv.___torch_mangle_149.Conv2d = prim::GetAttr[name="0"](%_0.77)
+  %weight.309 : Tensor = prim::GetAttr[name="weight"](%_0.75)
+  %651 : int[] = prim::ListConstruct(%23, %23), scope: __module.features/__module.features.10/__module.features.10.block/__module.features.10.block.0/__module.features.10.block.0.0
+  %652 : int[] = prim::ListConstruct(%21, %21), scope: __module.features/__module.features.10/__module.features.10.block/__module.features.10.block.0/__module.features.10.block.0.0
+  %653 : int[] = prim::ListConstruct(%23, %23), scope: __module.features/__module.features.10/__module.features.10.block/__module.features.10.block.0/__module.features.10.block.0.0
+  %654 : int[] = prim::ListConstruct(%21, %21), scope: __module.features/__module.features.10/__module.features.10.block/__module.features.10.block.0/__module.features.10.block.0.0
+  %input.215 : Float(1, 576, 7, 7, strides=[28224, 49, 7, 1], requires_grad=0, device=cpu) = aten::_convolution(%input.213, %weight.309, %25, %651, %652, %653, %22, %654, %23, %22, %22, %20, %20), scope: __module.features/__module.features.10/__module.features.10.block/__module.features.10.block.0/__module.features.10.block.0.0 # /home/gorilla/Documents/Pytorch_static_analyzer/1_ExportingIR/.exportIRvenv/lib/python3.12/site-packages/torch/nn/modules/conv.py:548:0
+  %running_var.123 : Tensor = prim::GetAttr[name="running_var"](%_1.75)
+  %running_mean.123 : Tensor = prim::GetAttr[name="running_mean"](%_1.75)
+  %bias.187 : Tensor = prim::GetAttr[name="bias"](%_1.75)
+  %weight.311 : Tensor = prim::GetAttr[name="weight"](%_1.75)
+  %input.217 : Float(1, 576, 7, 7, strides=[28224, 49, 7, 1], requires_grad=0, device=cpu) = aten::batch_norm(%input.215, %weight.311, %bias.187, %running_mean.123, %running_var.123, %22, %27, %26, %20), scope: __module.features/__module.features.10/__module.features.10.block/__module.features.10.block.0/__module.features.10.block.0.1 # /home/gorilla/Documents/Pytorch_static_analyzer/1_ExportingIR/.exportIRvenv/lib/python3.12/site-packages/torch/nn/functional.py:2846:0
+  %input.219 : Float(1, 576, 7, 7, strides=[28224, 49, 7, 1], requires_grad=0, device=cpu) = aten::hardswish_(%input.217), scope: __module.features/__module.features.10/__module.features.10.block/__module.features.10.block.0/__module.features.10.block.0.2 # /home/gorilla/Documents/Pytorch_static_analyzer/1_ExportingIR/.exportIRvenv/lib/python3.12/site-packages/torch/nn/functional.py:2439:0
+  %_2.59 : __torch__.torch.nn.modules.activation.___torch_mangle_155.Hardswish = prim::GetAttr[name="2"](%_1.79)
+  %_1.77 : __torch__.torch.nn.modules.batchnorm.___torch_mangle_154.BatchNorm2d = prim::GetAttr[name="1"](%_1.79)
+  %_0.79 : __torch__.torch.nn.modules.conv.___torch_mangle_153.Conv2d = prim::GetAttr[name="0"](%_1.79)
+  %weight.313 : Tensor = prim::GetAttr[name="weight"](%_0.79)
+  %666 : int[] = prim::ListConstruct(%23, %23), scope: __module.features/__module.features.10/__module.features.10.block/__module.features.10.block.1/__module.features.10.block.1.0
+  %667 : int[] = prim::ListConstruct(%24, %24), scope: __module.features/__module.features.10/__module.features.10.block/__module.features.10.block.1/__module.features.10.block.1.0
+  %668 : int[] = prim::ListConstruct(%23, %23), scope: __module.features/__module.features.10/__module.features.10.block/__module.features.10.block.1/__module.features.10.block.1.0
+  %669 : int[] = prim::ListConstruct(%21, %21), scope: __module.features/__module.features.10/__module.features.10.block/__module.features.10.block.1/__module.features.10.block.1.0
+  %input.221 : Float(1, 576, 7, 7, strides=[28224, 49, 7, 1], requires_grad=0, device=cpu) = aten::_convolution(%input.219, %weight.313, %25, %666, %667, %668, %22, %669, %11, %22, %22, %20, %20), scope: __module.features/__module.features.10/__module.features.10.block/__module.features.10.block.1/__module.features.10.block.1.0 # /home/gorilla/Documents/Pytorch_static_analyzer/1_ExportingIR/.exportIRvenv/lib/python3.12/site-packages/torch/nn/modules/conv.py:548:0
+  %running_var.125 : Tensor = prim::GetAttr[name="running_var"](%_1.77)
+  %running_mean.125 : Tensor = prim::GetAttr[name="running_mean"](%_1.77)
+  %bias.189 : Tensor = prim::GetAttr[name="bias"](%_1.77)
+  %weight.315 : Tensor = prim::GetAttr[name="weight"](%_1.77)
+  %input.223 : Float(1, 576, 7, 7, strides=[28224, 49, 7, 1], requires_grad=0, device=cpu) = aten::batch_norm(%input.221, %weight.315, %bias.189, %running_mean.125, %running_var.125, %22, %27, %26, %20), scope: __module.features/__module.features.10/__module.features.10.block/__module.features.10.block.1/__module.features.10.block.1.1 # /home/gorilla/Documents/Pytorch_static_analyzer/1_ExportingIR/.exportIRvenv/lib/python3.12/site-packages/torch/nn/functional.py:2846:0
+  %input.225 : Float(1, 576, 7, 7, strides=[28224, 49, 7, 1], requires_grad=0, device=cpu) = aten::hardswish_(%input.223), scope: __module.features/__module.features.10/__module.features.10.block/__module.features.10.block.1/__module.features.10.block.1.2 # /home/gorilla/Documents/Pytorch_static_analyzer/1_ExportingIR/.exportIRvenv/lib/python3.12/site-packages/torch/nn/functional.py:2439:0
+  %scale_activation.15 : __torch__.torch.nn.modules.activation.___torch_mangle_161.Hardsigmoid = prim::GetAttr[name="scale_activation"](%_2.61)
+  %fc2.15 : __torch__.torch.nn.modules.conv.___torch_mangle_159.Conv2d = prim::GetAttr[name="fc2"](%_2.61)
+  %activation.15 : __torch__.torch.nn.modules.activation.___torch_mangle_160.ReLU = prim::GetAttr[name="activation"](%_2.61)
+  %fc1.15 : __torch__.torch.nn.modules.conv.___torch_mangle_158.Conv2d = prim::GetAttr[name="fc1"](%_2.61)
+  %avgpool.15 : __torch__.torch.nn.modules.pooling.___torch_mangle_157.AdaptiveAvgPool2d = prim::GetAttr[name="avgpool"](%_2.61)
+  %682 : int[] = prim::ListConstruct(%23, %23), scope: __module.features/__module.features.10/__module.features.10.block/__module.features.10.block.2/__module.features.10.block.2.avgpool
+  %input.227 : Float(1, 576, 1, 1, strides=[576, 1, 1, 1], requires_grad=0, device=cpu) = aten::adaptive_avg_pool2d(%input.225, %682), scope: __module.features/__module.features.10/__module.features.10.block/__module.features.10.block.2/__module.features.10.block.2.avgpool # /home/gorilla/Documents/Pytorch_static_analyzer/1_ExportingIR/.exportIRvenv/lib/python3.12/site-packages/torch/nn/functional.py:1397:0
+  %bias.191 : Tensor = prim::GetAttr[name="bias"](%fc1.15)
+  %weight.317 : Tensor = prim::GetAttr[name="weight"](%fc1.15)
+  %686 : int[] = prim::ListConstruct(%23, %23), scope: __module.features/__module.features.10/__module.features.10.block/__module.features.10.block.2/__module.features.10.block.2.fc1
+  %687 : int[] = prim::ListConstruct(%21, %21), scope: __module.features/__module.features.10/__module.features.10.block/__module.features.10.block.2/__module.features.10.block.2.fc1
+  %688 : int[] = prim::ListConstruct(%23, %23), scope: __module.features/__module.features.10/__module.features.10.block/__module.features.10.block.2/__module.features.10.block.2.fc1
+  %689 : int[] = prim::ListConstruct(%21, %21), scope: __module.features/__module.features.10/__module.features.10.block/__module.features.10.block.2/__module.features.10.block.2.fc1
+  %input.229 : Float(1, 144, 1, 1, strides=[144, 1, 1, 1], requires_grad=0, device=cpu) = aten::_convolution(%input.227, %weight.317, %bias.191, %686, %687, %688, %22, %689, %23, %22, %22, %20, %20), scope: __module.features/__module.features.10/__module.features.10.block/__module.features.10.block.2/__module.features.10.block.2.fc1 # /home/gorilla/Documents/Pytorch_static_analyzer/1_ExportingIR/.exportIRvenv/lib/python3.12/site-packages/torch/nn/modules/conv.py:548:0
+  %input.231 : Float(1, 144, 1, 1, strides=[144, 1, 1, 1], requires_grad=0, device=cpu) = aten::relu(%input.229), scope: __module.features/__module.features.10/__module.features.10.block/__module.features.10.block.2/__module.features.10.block.2.activation # /home/gorilla/Documents/Pytorch_static_analyzer/1_ExportingIR/.exportIRvenv/lib/python3.12/site-packages/torch/nn/functional.py:1721:0
+  %bias.193 : Tensor = prim::GetAttr[name="bias"](%fc2.15)
+  %weight.319 : Tensor = prim::GetAttr[name="weight"](%fc2.15)
+  %694 : int[] = prim::ListConstruct(%23, %23), scope: __module.features/__module.features.10/__module.features.10.block/__module.features.10.block.2/__module.features.10.block.2.fc2
+  %695 : int[] = prim::ListConstruct(%21, %21), scope: __module.features/__module.features.10/__module.features.10.block/__module.features.10.block.2/__module.features.10.block.2.fc2
+  %696 : int[] = prim::ListConstruct(%23, %23), scope: __module.features/__module.features.10/__module.features.10.block/__module.features.10.block.2/__module.features.10.block.2.fc2
+  %697 : int[] = prim::ListConstruct(%21, %21), scope: __module.features/__module.features.10/__module.features.10.block/__module.features.10.block.2/__module.features.10.block.2.fc2
+  %input.233 : Float(1, 576, 1, 1, strides=[576, 1, 1, 1], requires_grad=0, device=cpu) = aten::_convolution(%input.231, %weight.319, %bias.193, %694, %695, %696, %22, %697, %23, %22, %22, %20, %20), scope: __module.features/__module.features.10/__module.features.10.block/__module.features.10.block.2/__module.features.10.block.2.fc2 # /home/gorilla/Documents/Pytorch_static_analyzer/1_ExportingIR/.exportIRvenv/lib/python3.12/site-packages/torch/nn/modules/conv.py:548:0
+  %scale.15 : Float(1, 576, 1, 1, strides=[576, 1, 1, 1], requires_grad=0, device=cpu) = aten::hardsigmoid(%input.233), scope: __module.features/__module.features.10/__module.features.10.block/__module.features.10.block.2/__module.features.10.block.2.scale_activation # /home/gorilla/Documents/Pytorch_static_analyzer/1_ExportingIR/.exportIRvenv/lib/python3.12/site-packages/torch/nn/functional.py:2323:0
+  %input.235 : Float(1, 576, 7, 7, strides=[28224, 49, 7, 1], requires_grad=0, device=cpu) = aten::mul(%scale.15, %input.225), scope: __module.features/__module.features.10/__module.features.10.block/__module.features.10.block.2 # /home/gorilla/Documents/Pytorch_static_analyzer/1_ExportingIR/.exportIRvenv/lib/python3.12/site-packages/torchvision/ops/misc.py:261:0
+  %_1.81 : __torch__.torch.nn.modules.batchnorm.___torch_mangle_164.BatchNorm2d = prim::GetAttr[name="1"](%_3.15)
+  %_0.81 : __torch__.torch.nn.modules.conv.___torch_mangle_163.Conv2d = prim::GetAttr[name="0"](%_3.15)
+  %weight.321 : Tensor = prim::GetAttr[name="weight"](%_0.81)
+  %704 : int[] = prim::ListConstruct(%23, %23), scope: __module.features/__module.features.10/__module.features.10.block/__module.features.10.block.3/__module.features.10.block.3.0
+  %705 : int[] = prim::ListConstruct(%21, %21), scope: __module.features/__module.features.10/__module.features.10.block/__module.features.10.block.3/__module.features.10.block.3.0
+  %706 : int[] = prim::ListConstruct(%23, %23), scope: __module.features/__module.features.10/__module.features.10.block/__module.features.10.block.3/__module.features.10.block.3.0
+  %707 : int[] = prim::ListConstruct(%21, %21), scope: __module.features/__module.features.10/__module.features.10.block/__module.features.10.block.3/__module.features.10.block.3.0
+  %input.237 : Float(1, 96, 7, 7, strides=[4704, 49, 7, 1], requires_grad=0, device=cpu) = aten::_convolution(%input.235, %weight.321, %25, %704, %705, %706, %22, %707, %23, %22, %22, %20, %20), scope: __module.features/__module.features.10/__module.features.10.block/__module.features.10.block.3/__module.features.10.block.3.0 # /home/gorilla/Documents/Pytorch_static_analyzer/1_ExportingIR/.exportIRvenv/lib/python3.12/site-packages/torch/nn/modules/conv.py:548:0
+  %running_var.127 : Tensor = prim::GetAttr[name="running_var"](%_1.81)
+  %running_mean.127 : Tensor = prim::GetAttr[name="running_mean"](%_1.81)
+  %bias.195 : Tensor = prim::GetAttr[name="bias"](%_1.81)
+  %weight.323 : Tensor = prim::GetAttr[name="weight"](%_1.81)
+  %result.9 : Float(1, 96, 7, 7, strides=[4704, 49, 7, 1], requires_grad=0, device=cpu) = aten::batch_norm(%input.237, %weight.323, %bias.195, %running_mean.127, %running_var.127, %22, %27, %26, %20), scope: __module.features/__module.features.10/__module.features.10.block/__module.features.10.block.3/__module.features.10.block.3.1 # /home/gorilla/Documents/Pytorch_static_analyzer/1_ExportingIR/.exportIRvenv/lib/python3.12/site-packages/torch/nn/functional.py:2846:0
+  %input.239 : Float(1, 96, 7, 7, strides=[4704, 49, 7, 1], requires_grad=0, device=cpu) = aten::add_(%result.9, %input.213, %23), scope: __module.features/__module.features.10 # /home/gorilla/Documents/Pytorch_static_analyzer/1_ExportingIR/.exportIRvenv/lib/python3.12/site-packages/torchvision/models/mobilenetv3.py:114:0
+  %block : __torch__.torch.nn.modules.container.___torch_mangle_185.Sequential = prim::GetAttr[name="block"](%_11)
+  %_3.17 : __torch__.torchvision.ops.misc.___torch_mangle_184.Conv2dNormActivation = prim::GetAttr[name="3"](%block)
+  %_2.67 : __torch__.torchvision.ops.misc.___torch_mangle_181.SqueezeExcitation = prim::GetAttr[name="2"](%block)
+  %_1.87 : __torch__.torchvision.ops.misc.___torch_mangle_175.Conv2dNormActivation = prim::GetAttr[name="1"](%block)
+  %_0.85 : __torch__.torchvision.ops.misc.___torch_mangle_171.Conv2dNormActivation = prim::GetAttr[name="0"](%block)
+  %_2.63 : __torch__.torch.nn.modules.activation.___torch_mangle_170.Hardswish = prim::GetAttr[name="2"](%_0.85)
+  %_1.83 : __torch__.torch.nn.modules.batchnorm.___torch_mangle_169.BatchNorm2d = prim::GetAttr[name="1"](%_0.85)
+  %_0.83 : __torch__.torch.nn.modules.conv.___torch_mangle_168.Conv2d = prim::GetAttr[name="0"](%_0.85)
+  %weight.325 : Tensor = prim::GetAttr[name="weight"](%_0.83)
+  %724 : int[] = prim::ListConstruct(%23, %23), scope: __module.features/__module.features.11/__module.features.11.block/__module.features.11.block.0/__module.features.11.block.0.0
+  %725 : int[] = prim::ListConstruct(%21, %21), scope: __module.features/__module.features.11/__module.features.11.block/__module.features.11.block.0/__module.features.11.block.0.0
+  %726 : int[] = prim::ListConstruct(%23, %23), scope: __module.features/__module.features.11/__module.features.11.block/__module.features.11.block.0/__module.features.11.block.0.0
+  %727 : int[] = prim::ListConstruct(%21, %21), scope: __module.features/__module.features.11/__module.features.11.block/__module.features.11.block.0/__module.features.11.block.0.0
+  %input.241 : Float(1, 576, 7, 7, strides=[28224, 49, 7, 1], requires_grad=0, device=cpu) = aten::_convolution(%input.239, %weight.325, %25, %724, %725, %726, %22, %727, %23, %22, %22, %20, %20), scope: __module.features/__module.features.11/__module.features.11.block/__module.features.11.block.0/__module.features.11.block.0.0 # /home/gorilla/Documents/Pytorch_static_analyzer/1_ExportingIR/.exportIRvenv/lib/python3.12/site-packages/torch/nn/modules/conv.py:548:0
+  %running_var.129 : Tensor = prim::GetAttr[name="running_var"](%_1.83)
+  %running_mean.129 : Tensor = prim::GetAttr[name="running_mean"](%_1.83)
+  %bias.197 : Tensor = prim::GetAttr[name="bias"](%_1.83)
+  %weight.327 : Tensor = prim::GetAttr[name="weight"](%_1.83)
+  %input.243 : Float(1, 576, 7, 7, strides=[28224, 49, 7, 1], requires_grad=0, device=cpu) = aten::batch_norm(%input.241, %weight.327, %bias.197, %running_mean.129, %running_var.129, %22, %27, %26, %20), scope: __module.features/__module.features.11/__module.features.11.block/__module.features.11.block.0/__module.features.11.block.0.1 # /home/gorilla/Documents/Pytorch_static_analyzer/1_ExportingIR/.exportIRvenv/lib/python3.12/site-packages/torch/nn/functional.py:2846:0
+  %input.245 : Float(1, 576, 7, 7, strides=[28224, 49, 7, 1], requires_grad=0, device=cpu) = aten::hardswish_(%input.243), scope: __module.features/__module.features.11/__module.features.11.block/__module.features.11.block.0/__module.features.11.block.0.2 # /home/gorilla/Documents/Pytorch_static_analyzer/1_ExportingIR/.exportIRvenv/lib/python3.12/site-packages/torch/nn/functional.py:2439:0
+  %_2.65 : __torch__.torch.nn.modules.activation.___torch_mangle_174.Hardswish = prim::GetAttr[name="2"](%_1.87)
+  %_1.85 : __torch__.torch.nn.modules.batchnorm.___torch_mangle_173.BatchNorm2d = prim::GetAttr[name="1"](%_1.87)
+  %_0.87 : __torch__.torch.nn.modules.conv.___torch_mangle_172.Conv2d = prim::GetAttr[name="0"](%_1.87)
+  %weight.329 : Tensor = prim::GetAttr[name="weight"](%_0.87)
+  %739 : int[] = prim::ListConstruct(%23, %23), scope: __module.features/__module.features.11/__module.features.11.block/__module.features.11.block.1/__module.features.11.block.1.0
+  %740 : int[] = prim::ListConstruct(%24, %24), scope: __module.features/__module.features.11/__module.features.11.block/__module.features.11.block.1/__module.features.11.block.1.0
+  %741 : int[] = prim::ListConstruct(%23, %23), scope: __module.features/__module.features.11/__module.features.11.block/__module.features.11.block.1/__module.features.11.block.1.0
+  %742 : int[] = prim::ListConstruct(%21, %21), scope: __module.features/__module.features.11/__module.features.11.block/__module.features.11.block.1/__module.features.11.block.1.0
+  %input.247 : Float(1, 576, 7, 7, strides=[28224, 49, 7, 1], requires_grad=0, device=cpu) = aten::_convolution(%input.245, %weight.329, %25, %739, %740, %741, %22, %742, %11, %22, %22, %20, %20), scope: __module.features/__module.features.11/__module.features.11.block/__module.features.11.block.1/__module.features.11.block.1.0 # /home/gorilla/Documents/Pytorch_static_analyzer/1_ExportingIR/.exportIRvenv/lib/python3.12/site-packages/torch/nn/modules/conv.py:548:0
+  %running_var.131 : Tensor = prim::GetAttr[name="running_var"](%_1.85)
+  %running_mean.131 : Tensor = prim::GetAttr[name="running_mean"](%_1.85)
+  %bias.199 : Tensor = prim::GetAttr[name="bias"](%_1.85)
+  %weight.331 : Tensor = prim::GetAttr[name="weight"](%_1.85)
+  %input.249 : Float(1, 576, 7, 7, strides=[28224, 49, 7, 1], requires_grad=0, device=cpu) = aten::batch_norm(%input.247, %weight.331, %bias.199, %running_mean.131, %running_var.131, %22, %27, %26, %20), scope: __module.features/__module.features.11/__module.features.11.block/__module.features.11.block.1/__module.features.11.block.1.1 # /home/gorilla/Documents/Pytorch_static_analyzer/1_ExportingIR/.exportIRvenv/lib/python3.12/site-packages/torch/nn/functional.py:2846:0
+  %input.251 : Float(1, 576, 7, 7, strides=[28224, 49, 7, 1], requires_grad=0, device=cpu) = aten::hardswish_(%input.249), scope: __module.features/__module.features.11/__module.features.11.block/__module.features.11.block.1/__module.features.11.block.1.2 # /home/gorilla/Documents/Pytorch_static_analyzer/1_ExportingIR/.exportIRvenv/lib/python3.12/site-packages/torch/nn/functional.py:2439:0
+  %scale_activation : __torch__.torch.nn.modules.activation.___torch_mangle_180.Hardsigmoid = prim::GetAttr[name="scale_activation"](%_2.67)
+  %fc2 : __torch__.torch.nn.modules.conv.___torch_mangle_178.Conv2d = prim::GetAttr[name="fc2"](%_2.67)
+  %activation : __torch__.torch.nn.modules.activation.___torch_mangle_179.ReLU = prim::GetAttr[name="activation"](%_2.67)
+  %fc1 : __torch__.torch.nn.modules.conv.___torch_mangle_177.Conv2d = prim::GetAttr[name="fc1"](%_2.67)
+  %avgpool.17 : __torch__.torch.nn.modules.pooling.___torch_mangle_176.AdaptiveAvgPool2d = prim::GetAttr[name="avgpool"](%_2.67)
+  %755 : int[] = prim::ListConstruct(%23, %23), scope: __module.features/__module.features.11/__module.features.11.block/__module.features.11.block.2/__module.features.11.block.2.avgpool
+  %input.253 : Float(1, 576, 1, 1, strides=[576, 1, 1, 1], requires_grad=0, device=cpu) = aten::adaptive_avg_pool2d(%input.251, %755), scope: __module.features/__module.features.11/__module.features.11.block/__module.features.11.block.2/__module.features.11.block.2.avgpool # /home/gorilla/Documents/Pytorch_static_analyzer/1_ExportingIR/.exportIRvenv/lib/python3.12/site-packages/torch/nn/functional.py:1397:0
+  %bias.201 : Tensor = prim::GetAttr[name="bias"](%fc1)
+  %weight.333 : Tensor = prim::GetAttr[name="weight"](%fc1)
+  %759 : int[] = prim::ListConstruct(%23, %23), scope: __module.features/__module.features.11/__module.features.11.block/__module.features.11.block.2/__module.features.11.block.2.fc1
+  %760 : int[] = prim::ListConstruct(%21, %21), scope: __module.features/__module.features.11/__module.features.11.block/__module.features.11.block.2/__module.features.11.block.2.fc1
+  %761 : int[] = prim::ListConstruct(%23, %23), scope: __module.features/__module.features.11/__module.features.11.block/__module.features.11.block.2/__module.features.11.block.2.fc1
+  %762 : int[] = prim::ListConstruct(%21, %21), scope: __module.features/__module.features.11/__module.features.11.block/__module.features.11.block.2/__module.features.11.block.2.fc1
+  %input.255 : Float(1, 144, 1, 1, strides=[144, 1, 1, 1], requires_grad=0, device=cpu) = aten::_convolution(%input.253, %weight.333, %bias.201, %759, %760, %761, %22, %762, %23, %22, %22, %20, %20), scope: __module.features/__module.features.11/__module.features.11.block/__module.features.11.block.2/__module.features.11.block.2.fc1 # /home/gorilla/Documents/Pytorch_static_analyzer/1_ExportingIR/.exportIRvenv/lib/python3.12/site-packages/torch/nn/modules/conv.py:548:0
+  %input.257 : Float(1, 144, 1, 1, strides=[144, 1, 1, 1], requires_grad=0, device=cpu) = aten::relu(%input.255), scope: __module.features/__module.features.11/__module.features.11.block/__module.features.11.block.2/__module.features.11.block.2.activation # /home/gorilla/Documents/Pytorch_static_analyzer/1_ExportingIR/.exportIRvenv/lib/python3.12/site-packages/torch/nn/functional.py:1721:0
+  %bias.203 : Tensor = prim::GetAttr[name="bias"](%fc2)
+  %weight.335 : Tensor = prim::GetAttr[name="weight"](%fc2)
+  %767 : int[] = prim::ListConstruct(%23, %23), scope: __module.features/__module.features.11/__module.features.11.block/__module.features.11.block.2/__module.features.11.block.2.fc2
+  %768 : int[] = prim::ListConstruct(%21, %21), scope: __module.features/__module.features.11/__module.features.11.block/__module.features.11.block.2/__module.features.11.block.2.fc2
+  %769 : int[] = prim::ListConstruct(%23, %23), scope: __module.features/__module.features.11/__module.features.11.block/__module.features.11.block.2/__module.features.11.block.2.fc2
+  %770 : int[] = prim::ListConstruct(%21, %21), scope: __module.features/__module.features.11/__module.features.11.block/__module.features.11.block.2/__module.features.11.block.2.fc2
+  %input.259 : Float(1, 576, 1, 1, strides=[576, 1, 1, 1], requires_grad=0, device=cpu) = aten::_convolution(%input.257, %weight.335, %bias.203, %767, %768, %769, %22, %770, %23, %22, %22, %20, %20), scope: __module.features/__module.features.11/__module.features.11.block/__module.features.11.block.2/__module.features.11.block.2.fc2 # /home/gorilla/Documents/Pytorch_static_analyzer/1_ExportingIR/.exportIRvenv/lib/python3.12/site-packages/torch/nn/modules/conv.py:548:0
+  %scale : Float(1, 576, 1, 1, strides=[576, 1, 1, 1], requires_grad=0, device=cpu) = aten::hardsigmoid(%input.259), scope: __module.features/__module.features.11/__module.features.11.block/__module.features.11.block.2/__module.features.11.block.2.scale_activation # /home/gorilla/Documents/Pytorch_static_analyzer/1_ExportingIR/.exportIRvenv/lib/python3.12/site-packages/torch/nn/functional.py:2323:0
+  %input.261 : Float(1, 576, 7, 7, strides=[28224, 49, 7, 1], requires_grad=0, device=cpu) = aten::mul(%scale, %input.251), scope: __module.features/__module.features.11/__module.features.11.block/__module.features.11.block.2 # /home/gorilla/Documents/Pytorch_static_analyzer/1_ExportingIR/.exportIRvenv/lib/python3.12/site-packages/torchvision/ops/misc.py:261:0
+  %_1.89 : __torch__.torch.nn.modules.batchnorm.___torch_mangle_183.BatchNorm2d = prim::GetAttr[name="1"](%_3.17)
+  %_0.89 : __torch__.torch.nn.modules.conv.___torch_mangle_182.Conv2d = prim::GetAttr[name="0"](%_3.17)
+  %weight.337 : Tensor = prim::GetAttr[name="weight"](%_0.89)
+  %777 : int[] = prim::ListConstruct(%23, %23), scope: __module.features/__module.features.11/__module.features.11.block/__module.features.11.block.3/__module.features.11.block.3.0
+  %778 : int[] = prim::ListConstruct(%21, %21), scope: __module.features/__module.features.11/__module.features.11.block/__module.features.11.block.3/__module.features.11.block.3.0
+  %779 : int[] = prim::ListConstruct(%23, %23), scope: __module.features/__module.features.11/__module.features.11.block/__module.features.11.block.3/__module.features.11.block.3.0
+  %780 : int[] = prim::ListConstruct(%21, %21), scope: __module.features/__module.features.11/__module.features.11.block/__module.features.11.block.3/__module.features.11.block.3.0
+  %input.263 : Float(1, 96, 7, 7, strides=[4704, 49, 7, 1], requires_grad=0, device=cpu) = aten::_convolution(%input.261, %weight.337, %25, %777, %778, %779, %22, %780, %23, %22, %22, %20, %20), scope: __module.features/__module.features.11/__module.features.11.block/__module.features.11.block.3/__module.features.11.block.3.0 # /home/gorilla/Documents/Pytorch_static_analyzer/1_ExportingIR/.exportIRvenv/lib/python3.12/site-packages/torch/nn/modules/conv.py:548:0
+  %running_var.133 : Tensor = prim::GetAttr[name="running_var"](%_1.89)
+  %running_mean.133 : Tensor = prim::GetAttr[name="running_mean"](%_1.89)
+  %bias.205 : Tensor = prim::GetAttr[name="bias"](%_1.89)
+  %weight.339 : Tensor = prim::GetAttr[name="weight"](%_1.89)
+  %result : Float(1, 96, 7, 7, strides=[4704, 49, 7, 1], requires_grad=0, device=cpu) = aten::batch_norm(%input.263, %weight.339, %bias.205, %running_mean.133, %running_var.133, %22, %27, %26, %20), scope: __module.features/__module.features.11/__module.features.11.block/__module.features.11.block.3/__module.features.11.block.3.1 # /home/gorilla/Documents/Pytorch_static_analyzer/1_ExportingIR/.exportIRvenv/lib/python3.12/site-packages/torch/nn/functional.py:2846:0
+  %input.265 : Float(1, 96, 7, 7, strides=[4704, 49, 7, 1], requires_grad=0, device=cpu) = aten::add_(%result, %input.239, %23), scope: __module.features/__module.features.11 # /home/gorilla/Documents/Pytorch_static_analyzer/1_ExportingIR/.exportIRvenv/lib/python3.12/site-packages/torchvision/models/mobilenetv3.py:114:0
+  %_2.69 : __torch__.torch.nn.modules.activation.___torch_mangle_189.Hardswish = prim::GetAttr[name="2"](%_12)
+  %_1.91 : __torch__.torch.nn.modules.batchnorm.___torch_mangle_188.BatchNorm2d = prim::GetAttr[name="1"](%_12)
+  %_0.91 : __torch__.torch.nn.modules.conv.___torch_mangle_187.Conv2d = prim::GetAttr[name="0"](%_12)
+  %weight.341 : Tensor = prim::GetAttr[name="weight"](%_0.91)
+  %792 : int[] = prim::ListConstruct(%23, %23), scope: __module.features/__module.features.12/__module.features.12.0
+  %793 : int[] = prim::ListConstruct(%21, %21), scope: __module.features/__module.features.12/__module.features.12.0
+  %794 : int[] = prim::ListConstruct(%23, %23), scope: __module.features/__module.features.12/__module.features.12.0
+  %795 : int[] = prim::ListConstruct(%21, %21), scope: __module.features/__module.features.12/__module.features.12.0
+  %input.267 : Float(1, 576, 7, 7, strides=[28224, 49, 7, 1], requires_grad=0, device=cpu) = aten::_convolution(%input.265, %weight.341, %25, %792, %793, %794, %22, %795, %23, %22, %22, %20, %20), scope: __module.features/__module.features.12/__module.features.12.0 # /home/gorilla/Documents/Pytorch_static_analyzer/1_ExportingIR/.exportIRvenv/lib/python3.12/site-packages/torch/nn/modules/conv.py:548:0
+  %running_var : Tensor = prim::GetAttr[name="running_var"](%_1.91)
+  %running_mean : Tensor = prim::GetAttr[name="running_mean"](%_1.91)
+  %bias.207 : Tensor = prim::GetAttr[name="bias"](%_1.91)
+  %weight.343 : Tensor = prim::GetAttr[name="weight"](%_1.91)
+  %input.269 : Float(1, 576, 7, 7, strides=[28224, 49, 7, 1], requires_grad=0, device=cpu) = aten::batch_norm(%input.267, %weight.343, %bias.207, %running_mean, %running_var, %22, %27, %26, %20), scope: __module.features/__module.features.12/__module.features.12.1 # /home/gorilla/Documents/Pytorch_static_analyzer/1_ExportingIR/.exportIRvenv/lib/python3.12/site-packages/torch/nn/functional.py:2846:0
+  %input.271 : Float(1, 576, 7, 7, strides=[28224, 49, 7, 1], requires_grad=0, device=cpu) = aten::hardswish_(%input.269), scope: __module.features/__module.features.12/__module.features.12.2 # /home/gorilla/Documents/Pytorch_static_analyzer/1_ExportingIR/.exportIRvenv/lib/python3.12/site-packages/torch/nn/functional.py:2439:0
+  %803 : int = prim::Constant[value=1](), scope: __module.avgpool # /home/gorilla/Documents/Pytorch_static_analyzer/1_ExportingIR/.exportIRvenv/lib/python3.12/site-packages/torch/nn/functional.py:1397:0
+  %804 : int[] = prim::ListConstruct(%803, %803), scope: __module.avgpool
+  %x : Float(1, 576, 1, 1, strides=[576, 1, 1, 1], requires_grad=0, device=cpu) = aten::adaptive_avg_pool2d(%input.271, %804), scope: __module.avgpool # /home/gorilla/Documents/Pytorch_static_analyzer/1_ExportingIR/.exportIRvenv/lib/python3.12/site-packages/torch/nn/functional.py:1397:0
+  %7 : int = prim::Constant[value=1]() # /home/gorilla/Documents/Pytorch_static_analyzer/1_ExportingIR/.exportIRvenv/lib/python3.12/site-packages/torchvision/models/mobilenetv3.py:214:0
+  %8 : int = prim::Constant[value=-1]() # /home/gorilla/Documents/Pytorch_static_analyzer/1_ExportingIR/.exportIRvenv/lib/python3.12/site-packages/torchvision/models/mobilenetv3.py:214:0
+  %input.273 : Float(1, 576, strides=[576, 1], requires_grad=0, device=cpu) = aten::flatten(%x, %7, %8) # /home/gorilla/Documents/Pytorch_static_analyzer/1_ExportingIR/.exportIRvenv/lib/python3.12/site-packages/torchvision/models/mobilenetv3.py:214:0
+  %806 : float = prim::Constant[value=0.20000000000000001](), scope: __module.classifier/__module.classifier.2 # /home/gorilla/Documents/Pytorch_static_analyzer/1_ExportingIR/.exportIRvenv/lib/python3.12/site-packages/torch/nn/functional.py:1441:0
+  %807 : bool = prim::Constant[value=0](), scope: __module.classifier/__module.classifier.2 # /home/gorilla/Documents/Pytorch_static_analyzer/1_ExportingIR/.exportIRvenv/lib/python3.12/site-packages/torch/nn/functional.py:1441:0
+  %_3 : __torch__.torch.nn.modules.linear.___torch_mangle_194.Linear = prim::GetAttr[name="3"](%classifier)
+  %_2 : __torch__.torch.nn.modules.dropout.Dropout = prim::GetAttr[name="2"](%classifier)
+  %_1 : __torch__.torch.nn.modules.activation.___torch_mangle_193.Hardswish = prim::GetAttr[name="1"](%classifier)
+  %_0 : __torch__.torch.nn.modules.linear.Linear = prim::GetAttr[name="0"](%classifier)
+  %bias.209 : Tensor = prim::GetAttr[name="bias"](%_0)
+  %weight.345 : Tensor = prim::GetAttr[name="weight"](%_0)
+  %input.275 : Float(1, 1024, strides=[1024, 1], requires_grad=0, device=cpu) = aten::linear(%input.273, %weight.345, %bias.209), scope: __module.classifier/__module.classifier.0 # /home/gorilla/Documents/Pytorch_static_analyzer/1_ExportingIR/.exportIRvenv/lib/python3.12/site-packages/torch/nn/modules/linear.py:134:0
+  %input.277 : Float(1, 1024, strides=[1024, 1], requires_grad=0, device=cpu) = aten::hardswish_(%input.275), scope: __module.classifier/__module.classifier.1 # /home/gorilla/Documents/Pytorch_static_analyzer/1_ExportingIR/.exportIRvenv/lib/python3.12/site-packages/torch/nn/functional.py:2439:0
+  %input : Float(1, 1024, strides=[1024, 1], requires_grad=0, device=cpu) = aten::dropout_(%input.277, %806, %807), scope: __module.classifier/__module.classifier.2 # /home/gorilla/Documents/Pytorch_static_analyzer/1_ExportingIR/.exportIRvenv/lib/python3.12/site-packages/torch/nn/functional.py:1441:0
+  %bias : Tensor = prim::GetAttr[name="bias"](%_3)
+  %weight : Tensor = prim::GetAttr[name="weight"](%_3)
+  %819 : Float(1, 1000, strides=[1000, 1], requires_grad=0, device=cpu) = aten::linear(%input, %weight, %bias), scope: __module.classifier/__module.classifier.3 # /home/gorilla/Documents/Pytorch_static_analyzer/1_ExportingIR/.exportIRvenv/lib/python3.12/site-packages/torch/nn/modules/linear.py:134:0
+  return (%819)
