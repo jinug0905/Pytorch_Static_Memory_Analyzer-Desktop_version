@@ -19,16 +19,24 @@ from TorchScript IR, and validate it against PyTorch CUDA allocator measurements
 
 Note: `reserved` can exceed `allocated` and can look higher in tools like `nvidia-smi` due to caching.
 
+## Test Environment
+
+- **CPU**: AMD Ryzen 9 9950X
+- **GPU**: NVIDIA GeForce RTX 4080 SUPER
+- **CUDA Version**: 13.1
+
 ## Quickstart
+
+0) Create virtual environment for each folder (each folder has own requirements.txt file)
 
 1) Export a traced TorchScript model:
 ```bash
-python 1_ExportingIR/3_export_resnet_traced.py --model resnet50 --batch 1 --h 224 --w 224 --out_dir data
+python 1_ExportingIR/1_exportIr.py --model resnet50 --batch 1 --h 224 --w 224 --out_dir data
 ```
 
 2) Measure runtime peaks:
 ```bash
-python 1_ExportingIR/4_measure_runtime_peak.py --model resnet50 --batch 1 --h 224 --w 224
+python 1_ExportingIR/2_testPre.py --model resnet50 --batch 1 --h 224 --w 224
 ```
 
 3) Build the C++ analyzer:
@@ -77,6 +85,7 @@ cmake --build . -j
 - Make it work for different deep learning models other than computer vision models
 - Add alias analysis to avoid double-counting views/in-place.
 - Add a `torch.export` path for more robust shape/dtype metadata (TorchScript is deprecated in recent PyTorch).
+- Torch Script and trace are depreciated. Shift implementation based on 'Torch.compile'
 
 ## References
 
