@@ -35,6 +35,7 @@ def main():
 
     with torch.no_grad():
         ts = torch.jit.trace(m, x, strict=False)
+        # ts = torch.jit.script(m)
 
     ts_path = out_dir / f"{args.model}b{args.batch}_traced.pt"
     ir_path = out_dir / f"{args.model}b{args.batch}_traced.ir.txt"
